@@ -3,423 +3,492 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RETRO ENGLISH QUIZ ARCADE</title>
+  <title>RETRO ENGLISH QUIZ</title>
   <style>
-    @import url('https://cdn.jsdelivr.net/gh/neodgm/neodgm-web@latest/neodgm.css');
-
-    * { box-sizing: border-box; font-family: 'NeoDunggeunmo', cursive, monospace, sans-serif; }
-    body { background-color: #0f172a; color: #f8fafc; display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; padding: 20px 10px; margin: 0; }
-    .arcade-card { background: #1e293b; border: 4px solid #475569; border-radius: 12px; padding: 20px; width: 100%; max-width: 540px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-
-    .arcade-header { display: flex; justify-content: space-between; background: #0f172a; border: 2px solid #334155; padding: 12px; border-radius: 8px; margin-bottom: 16px; font-size: 14px; }
-    .header-box { text-align: center; }
-    .header-label { color: #94a3b8; font-size: 11px; margin-bottom: 4px; }
-    .header-val { color: #f59e0b; font-size: 16px; font-weight: bold; }
-
-    .config-section { background: #334155; border-radius: 8px; padding: 12px; margin-bottom: 16px; font-size: 13px; }
-    .config-title { color: #38bdf8; margin-bottom: 8px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
-    .btn-small { background: #475569; border: 1px solid #64748b; color: #f8fafc; padding: 3px 8px; font-size: 11px; cursor: pointer; border-radius: 4px; }
-    .btn-small:hover { background: #64748b; }
+    @import url('https://cdn.jsdelivr.net/gh/noonnu/noonfonts_2001@1.1/DungGeunMo.woff');
     
-    .file-list { max-height: 110px; overflow-y: auto; background: #1e293b; border: 1px solid #475569; padding: 8px; border-radius: 6px; margin-bottom: 10px; }
-    .file-item { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; font-size: 12px; color: #cbd5e1; }
-    .file-item label { cursor: pointer; display: flex; align-items: center; gap: 6px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .file-date { font-size: 10px; color: #64748b; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'DungGeunMo', 'Pretendard', 'Malgun Gothic', '맑은 고딕', sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 15px;
+    }
+    
+    .arcade-card {
+      background: #1e293b;
+      border: 4px solid #475569;
+      border-radius: 16px;
+      padding: 24px;
+      width: 100%;
+      max-width: 520px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
 
-    .selector-row { display: flex; gap: 6px; align-items: center; }
-    .opt-btn { flex: 1; padding: 6px; background: #1e293b; border: 1px solid #475569; color: #cbd5e1; font-size: 12px; cursor: pointer; border-radius: 4px; text-align: center; }
-    .opt-btn.active { background: #0284c7; border-color: #38bdf8; color: #ffffff; }
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0f172a;
+      border: 2px solid #334155;
+      padding: 10px 14px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
 
-    .mode-bar { display: flex; gap: 6px; margin-bottom: 16px; }
-    .mode-btn { flex: 1; padding: 10px 4px; background: #334155; border: 2px solid #475569; color: #94a3b8; font-size: 12px; cursor: pointer; border-radius: 6px; text-align: center; }
-    .mode-btn.active { background: #2563eb; border-color: #60a5fa; color: #ffffff; }
+    .lives { color: #ef4444; letter-spacing: 2px; }
+    .score { color: #f59e0b; font-weight: bold; }
 
-    .question-card { background: #0f172a; border: 2px solid #334155; border-radius: 8px; padding: 20px; text-align: center; margin-bottom: 16px; min-height: 100px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-    .unit-badge { font-size: 11px; color: #38bdf8; background: #1e293b; padding: 3px 8px; border-radius: 4px; margin-bottom: 8px; border: 1px solid #334155; }
-    .q-meaning { font-size: 18px; color: #f8fafc; font-weight: bold; line-height: 1.5; word-break: keep-all; }
-    .q-blank-display { font-size: 20px; color: #f59e0b; margin-top: 10px; letter-spacing: 2px; }
+    /* 모드 버튼 */
+    .mode-bar { display: flex; gap: 8px; margin-bottom: 14px; }
+    .mode-btn {
+      flex: 1; padding: 10px; border: 2px solid #475569; border-radius: 8px;
+      background: #334155; color: #cbd5e1; font-size: 13px; font-family: inherit;
+      cursor: pointer; transition: 0.1s;
+    }
+    .mode-btn.active { background: #2563eb; color: #ffffff; border-color: #60a5fa; }
 
-    .hint-container { margin-bottom: 12px; text-align: center; }
-    .hint-btn { background: #d97706; border: none; color: white; padding: 6px 12px; font-size: 12px; cursor: pointer; border-radius: 4px; }
-    .hint-btn:hover { background: #b45309; }
-    .hint-text { margin-top: 8px; background: #0f172a; border: 1px dashed #d97706; padding: 8px; border-radius: 6px; color: #fbbf24; font-size: 16px; letter-spacing: 3px; display: none; }
+    /* 퀴즈 형식 선택 */
+    .type-bar { display: flex; gap: 6px; margin-bottom: 14px; }
+    .type-btn {
+      flex: 1; padding: 8px 4px; border: 2px solid #334155; border-radius: 6px;
+      background: #0f172a; color: #94a3b8; font-size: 12px; font-family: inherit;
+      cursor: pointer; text-align: center;
+    }
+    .type-btn.active { background: #0284c7; color: #ffffff; border-color: #38bdf8; }
 
-    .input-box { display: flex; gap: 8px; margin-bottom: 16px; }
-    .answer-input { flex: 1; padding: 12px; background: #0f172a; border: 2px solid #475569; color: #f8fafc; font-size: 16px; border-radius: 6px; outline: none; }
-    .answer-input:focus { border-color: #38bdf8; }
-    .submit-btn { padding: 12px 18px; background: #2563eb; border: 2px solid #60a5fa; color: white; border-radius: 6px; cursor: pointer; font-size: 14px; }
-    .submit-btn:hover { background: #1d4ed8; }
+    /* 파일 선택 아코디언 */
+    .file-select-box {
+      background: #0f172a; border: 2px solid #334155; border-radius: 8px;
+      padding: 10px; margin-bottom: 14px; font-size: 12px;
+    }
+    .file-list { max-height: 110px; overflow-y: auto; margin-top: 8px; display: flex; flex-direction: column; gap: 4px; }
+    .file-item { display: flex; align-items: center; gap: 6px; color: #cbd5e1; }
 
-    .choices-grid { display: grid; grid-template-columns: 1fr; gap: 8px; margin-bottom: 16px; }
-    .choice-btn { padding: 12px; background: #0f172a; border: 2px solid #334155; color: #f8fafc; border-radius: 6px; font-size: 14px; text-align: left; cursor: pointer; transition: all 0.15s; }
-    .choice-btn:hover { background: #334155; border-color: #38bdf8; }
+    /* 세션 문제 수 버튼 */
+    .session-bar { display: flex; align-items: center; gap: 6px; margin-bottom: 16px; font-size: 12px; }
+    .count-btn {
+      padding: 6px 12px; border: 2px solid #334155; border-radius: 6px;
+      background: #0f172a; color: #94a3b8; font-family: inherit; cursor: pointer;
+    }
+    .count-btn.active { background: #d97706; color: #ffffff; border-color: #fbbf24; }
 
-    .result-box { padding: 12px; border-radius: 6px; font-size: 14px; text-align: center; margin-bottom: 16px; display: none; line-height: 1.4; }
-    .result-box.correct { background: #064e3b; border: 2px solid #10b981; color: #a7f3d0; }
-    .result-box.wrong { background: #7f1d1d; border: 2px solid #ef4444; color: #fca5a5; }
+    /* 프로그레스 바 */
+    .progress-bg { background: #0f172a; border-radius: 6px; height: 10px; border: 1px solid #334155; margin-bottom: 14px; overflow: hidden; }
+    .progress-fill { background: #38bdf8; height: 100%; width: 0%; transition: width 0.2s; }
 
-    .next-btn { width: 100%; padding: 14px; background: #059669; border: 2px solid #34d399; color: white; border-radius: 6px; font-size: 15px; cursor: pointer; display: none; }
-    .next-btn:hover { background: #047857; }
+    /* 문제 영역 */
+    .unit-tag { font-size: 11px; color: #38bdf8; background: #0f172a; padding: 4px 8px; border-radius: 4px; border: 1px solid #0284c7; display: inline-block; margin-bottom: 10px; }
+    .question-card {
+      background: #0f172a; border: 2px solid #334155; padding: 20px; border-radius: 10px;
+      font-size: 18px; line-height: 1.6; min-height: 90px; margin-bottom: 16px; word-break: break-all;
+    }
 
-    .summary-box { text-align: center; padding: 20px 10px; display: none; }
-    .summary-title { font-size: 22px; color: #f59e0b; margin-bottom: 12px; }
-    .restart-btn { padding: 12px 24px; background: #2563eb; border: 2px solid #60a5fa; color: white; font-size: 14px; border-radius: 6px; cursor: pointer; margin-top: 12px; }
+    /* 입력 및 버튼 */
+    .input-group { display: flex; gap: 8px; margin-bottom: 14px; }
+    .quiz-input {
+      flex: 1; padding: 12px; border: 2px solid #475569; border-radius: 8px;
+      background: #0f172a; color: #ffffff; font-size: 16px; font-family: inherit; outline: none;
+    }
+    .quiz-input:focus { border-color: #38bdf8; }
+    .action-btn {
+      padding: 12px 18px; border: 2px solid #2563eb; border-radius: 8px;
+      background: #2563eb; color: white; font-family: inherit; font-size: 15px; cursor: pointer;
+    }
+
+    /* 힌트 상자 */
+    .hint-btn {
+      width: 100%; padding: 8px; background: #0f172a; border: 1px dashed #d97706; color: #fbbf24;
+      border-radius: 6px; font-family: inherit; font-size: 12px; cursor: pointer; margin-bottom: 12px;
+    }
+    .hint-box {
+      background: #1e1b4b; border: 1px solid #6366f1; padding: 10px; border-radius: 6px;
+      color: #a5b4fc; font-size: 15px; letter-spacing: 2px; margin-bottom: 12px; display: none; text-align: center;
+    }
+
+    /* 객관식 보기 버튼 */
+    .mc-grid { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+    .mc-btn {
+      padding: 12px; border: 2px solid #334155; border-radius: 8px;
+      background: #0f172a; color: #e2e8f0; font-family: inherit; font-size: 14px;
+      text-align: left; cursor: pointer; transition: 0.1s;
+    }
+    .mc-btn:hover { border-color: #38bdf8; background: #1e293b; }
+
+    /* 결과 메시지 */
+    .result-box { padding: 12px; border-radius: 8px; font-size: 14px; line-height: 1.5; margin-bottom: 14px; display: none; }
+    .result-box.correct { background: #064e3b; border: 1px solid #10b981; color: #a7f3d0; }
+    .result-box.wrong { background: #7f1d1d; border: 1px solid #ef4444; color: #fecaca; }
+
+    .next-btn {
+      width: 100%; padding: 14px; background: #059669; border: 2px solid #10b981; color: white;
+      border-radius: 8px; font-family: inherit; font-size: 16px; cursor: pointer; display: none;
+    }
   </style>
   <script src="learning_data.js"></script>
 </head>
 <body>
 
 <div class="arcade-card">
-  <div class="arcade-header">
-    <div class="header-box">
-      <div class="header-label">STAGE</div>
-      <div class="header-val" id="stage-val">1 / 10</div>
-    </div>
-    <div class="header-box">
-      <div class="header-label">SCORE</div>
-      <div class="header-val" id="score-val">0</div>
-    </div>
-    <div class="header-box">
-      <div class="header-label">LIFE</div>
-      <div class="header-val" id="life-val">❤️❤️❤️</div>
-    </div>
+  <!-- 상단 상태바 -->
+  <div class="top-header">
+    <div>STAGE <span id="stage-num" style="color:#38bdf8;">1</span></div>
+    <div class="score">SCORE <span id="score-val">0</span></div>
+    <div class="lives" id="lives-display">❤️❤️❤️</div>
   </div>
 
-  <div class="config-section">
-    <div class="config-title">
-      <span>📁 복습할 파일 선택 (최신순)</span>
+  <!-- 모드 선택 -->
+  <div class="mode-bar">
+    <button class="mode-btn active" id="mode-normal" onclick="setMode('normal')">⚡ 스마트 출제</button>
+    <button class="mode-btn" id="mode-wrong" onclick="setMode('wrong')">📕 오답노트 (<span id="wrong-badge">0</span>)</button>
+  </div>
+
+  <!-- 퀴즈 형식 선택 -->
+  <div class="type-bar">
+    <button class="type-btn active" id="type-fill" onclick="setQuizType('fill')">✏️ 빈칸채우기</button>
+    <button class="type-btn" id="type-subjective" onclick="setQuizType('subjective')">⌨️ 주관식</button>
+    <button class="type-btn" id="type-choice" onclick="setQuizType('choice')">🕹️ 객관식</button>
+  </div>
+
+  <!-- 세션 문제 수 -->
+  <div class="session-bar">
+    <span>문제 세트:</span>
+    <button class="count-btn" onclick="setLimit(10)">10개</button>
+    <button class="count-btn active" onclick="setLimit(20)">20개</button>
+    <button class="count-btn" onclick="setLimit(30)">30개</button>
+    <button class="count-btn" onclick="setLimit(999)">MAX(전체)</button>
+  </div>
+
+  <!-- 파일 선택 -->
+  <div class="file-select-box">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <strong>📁 출제 노트 선택 (최신순):</strong>
       <div>
-        <button class="btn-small" onclick="toggleAllFiles(true)">전체선택</button>
-        <button class="btn-small" onclick="toggleAllFiles(false)">해제</button>
+        <button onclick="toggleAllFiles(true)" style="font-size:10px; background:#334155; color:#fff; border:none; border-radius:3px; padding:2px 6px; cursor:pointer;">전체선택</button>
+        <button onclick="toggleAllFiles(false)" style="font-size:10px; background:#334155; color:#fff; border:none; border-radius:3px; padding:2px 6px; cursor:pointer;">해제</button>
       </div>
     </div>
-    <div class="file-list" id="file-checkboxes"></div>
-
-    <div class="config-title" style="margin-top:10px;">🎯 이번 세션 문제 수</div>
-    <div class="selector-row">
-      <div class="opt-btn" onclick="setCountLimit(10, this)">10개</div>
-      <div class="opt-btn active" onclick="setCountLimit(20, this)">20개</div>
-      <div class="opt-btn" onclick="setCountLimit(30, this)">30개</div>
-      <div class="opt-btn" onclick="setCountLimit(999, this)">MAX (전체)</div>
-    </div>
+    <div class="file-list" id="file-list-container"></div>
   </div>
 
-  <div class="mode-bar">
-    <div class="mode-btn active" id="m-blank" onclick="setQuizMode('blank')">✏️ 빈칸채우기</div>
-    <div class="mode-btn" id="m-subjective" onclick="setQuizMode('subjective')">⌨️ 주관식</div>
-    <div class="mode-btn" id="m-objective" onclick="setQuizMode('objective')">🕹️ 객관식</div>
-    <div class="mode-btn" id="m-wrong" onclick="setQuizMode('wrong')">📕 오답노트 (<span id="wrong-cnt">0</span>)</div>
+  <!-- 진행률 바 -->
+  <div class="progress-bg"><div class="progress-fill" id="progress-bar"></div></div>
+
+  <!-- 퀴즈 영역 -->
+  <span class="unit-tag" id="unit-tag">UNIT LOADING</span>
+  <div class="question-card" id="question-text">퀴즈 데이터를 준비 중입니다...</div>
+
+  <!-- 주관식 힌트 버튼 & 상자 -->
+  <button class="hint-btn" id="hint-btn" onclick="showHint()" style="display:none;">💡 힌트 보기 (첫 글자 & 알파벳 구조)</button>
+  <div class="hint-box" id="hint-box"></div>
+
+  <!-- 입력창 (주관식/빈칸) -->
+  <div class="input-group" id="input-group">
+    <input type="text" class="quiz-input" id="user-input" placeholder="정답 입력..." onkeyup="if(event.key==='Enter') submitAnswer()">
+    <button class="action-btn" id="submit-btn" onclick="submitAnswer()">제출</button>
   </div>
 
-  <div id="game-container">
-    <div class="question-card">
-      <span class="unit-badge" id="q-unit">UNIT</span>
-      <div class="q-meaning" id="q-meaning">질문을 준비 중입니다...</div>
-      <div class="q-blank-display" id="q-blank-display" style="display:none;"></div>
-    </div>
+  <!-- 객관식 보기 영역 -->
+  <div class="mc-grid" id="mc-container" style="display:none;"></div>
 
-    <div class="hint-container" id="hint-container" style="display:none;">
-      <button class="hint-btn" onclick="showSubjectiveHint()">💡 힌트 보기</button>
-      <div class="hint-text" id="hint-text-box"></div>
-    </div>
-
-    <div class="input-box" id="input-container">
-      <input type="text" id="user-input" class="answer-input" placeholder="정답 입력..." onkeyup="if(event.key==='Enter') submitAnswer()">
-      <button class="submit-btn" id="submit-btn" onclick="submitAnswer()">제출</button>
-    </div>
-
-    <div class="choices-grid" id="choices-container" style="display:none;"></div>
-
-    <div class="result-box" id="result-box"></div>
-    <button class="next-btn" id="next-btn" onclick="nextQuestion()">다음 스테이지 ➔</button>
-  </div>
-
-  <div class="summary-box" id="summary-container">
-    <div class="summary-title">👾 STAGE CLEAR! 👾</div>
-    <p style="color:#cbd5e1; font-size:15px; line-height:1.6;" id="summary-text"></p>
-    <button class="restart-btn" onclick="restartSession()">🔄 설정 유지하고 다시 시작</button>
-  </div>
+  <!-- 결과 상자 & 다음 버튼 -->
+  <div class="result-box" id="result-box"></div>
+  <button class="next-btn" id="next-btn" onclick="nextQuestion()">다음 문제 도전 ➔</button>
 </div>
 
 <script>
-  let allExpressions = [];
-  let currentQuizList = [];
-  let currentIndex = 0;
-  let score = 0;
-  let lives = 3;
-  
-  let quizMode = 'blank';
-  let countLimit = 20;
+  let currentMode = 'normal'; // 'normal' | 'wrong'
+  let quizType = 'fill';      // 'fill' | 'subjective' | 'choice'
+  let sessionLimit = 20;
   let currentQuestion = null;
   
-  let wrongNotes = JSON.parse(localStorage.getItem('retro_wrong_notes') || '[]');
+  let score = 0;
+  let lives = 3;
+  let sessionIndex = 0;
 
-  function initApp() {
-    allExpressions = window.expressionsData || [];
-    renderFileList();
-    updateWrongCountUI();
-    restartSession();
+  let wrongList = JSON.parse(localStorage.getItem('quiz_wrong_list') || '[]');
+  let selectedUnits = new Set();
+
+  function saveWrongList() {
+    localStorage.setItem('quiz_wrong_list', JSON.stringify(wrongList));
+    document.getElementById('wrong-badge').innerText = wrongList.length;
   }
 
-  function renderFileList() {
-    const fileMap = {};
-    allExpressions.forEach(item => {
-      if (!fileMap[item.unit]) {
-        fileMap[item.unit] = item.last_modified_str || '';
+  function initFiles() {
+    const rawData = window.expressionsData || [];
+    const container = document.getElementById('file-list-container');
+    container.innerHTML = '';
+    
+    const unitMap = new Map();
+    rawData.forEach(item => {
+      if (!unitMap.has(item.unit)) {
+        unitMap.set(item.unit, item.last_modified || 0);
       }
     });
 
-    const container = document.getElementById('file-checkboxes');
-    container.innerHTML = '';
-
-    Object.keys(fileMap).forEach(unit => {
+    unitMap.forEach((mtime, unit) => {
+      selectedUnits.add(unit);
       const div = document.createElement('div');
       div.className = 'file-item';
-      div.innerHTML = `
-        <label>
-          <input type="checkbox" class="file-chk" value="${unit}" checked onchange="restartSession()">
-          <span>${unit}</span>
-        </label>
-        <span class="file-date">${fileMap[unit]}</span>
-      `;
+      
+      let dateStr = '';
+      if (mtime) {
+        const d = new Date(mtime * 1000);
+        dateStr = ` <span style="font-size:10px; color:#64748b;">(${d.getMonth()+1}/${d.getDate()} ${d.getHours()}:${String(d.getMinutes()).padStart(2,'0')})</span>`;
+      }
+
+      div.innerHTML = `<input type="checkbox" checked value="${unit}" onchange="onUnitToggle(this)"> <span>${unit}${dateStr}</span>`;
       container.appendChild(div);
     });
+
+    saveWrongList();
   }
 
-  function toggleAllFiles(checkState) {
-    document.querySelectorAll('.file-chk').forEach(chk => chk.checked = checkState);
-    restartSession();
+  function toggleAllFiles(status) {
+    selectedUnits.clear();
+    const cbs = document.querySelectorAll('#file-list-container input[type="checkbox"]');
+    cbs.forEach(cb => {
+      cb.checked = status;
+      if (status) selectedUnits.add(cb.value);
+    });
+    sessionIndex = 0;
+    loadNextQuestion();
   }
 
-  function setCountLimit(num, el) {
-    countLimit = num;
-    document.querySelectorAll('.selector-row .opt-btn').forEach(btn => btn.classList.remove('active'));
-    el.classList.add('active');
-    restartSession();
+  function onUnitToggle(cb) {
+    if (cb.checked) selectedUnits.add(cb.value);
+    else selectedUnits.delete(cb.value);
+    sessionIndex = 0;
+    loadNextQuestion();
   }
 
-  function setQuizMode(mode) {
-    if (mode === 'wrong' && wrongNotes.length === 0) {
-      alert("📕 저장된 오답노트가 없습니다!");
-      return;
-    }
-    quizMode = mode;
-    document.querySelectorAll('.mode-bar .mode-btn').forEach(btn => btn.classList.remove('active'));
-    document.getElementById(`m-${mode}`).classList.add('active');
-    restartSession();
-  }
-
-  function updateWrongCountUI() {
-    document.getElementById('wrong-cnt').innerText = wrongNotes.length;
-  }
-
-  function restartSession() {
-    document.getElementById('game-container').style.display = 'block';
-    document.getElementById('summary-container').style.display = 'none';
-
-    score = 0;
-    lives = 3;
-    currentIndex = 0;
-
-    const checkedUnits = Array.from(document.querySelectorAll('.file-chk:checked')).map(c => c.value);
+  function setMode(mode) {
+    currentMode = mode;
+    document.getElementById('mode-normal').classList.toggle('active', mode === 'normal');
+    document.getElementById('mode-wrong').classList.toggle('active', mode === 'wrong');
     
-    let baseList = [];
-    if (quizMode === 'wrong') {
-      baseList = [...wrongNotes];
-    } else {
-      baseList = allExpressions.filter(item => checkedUnits.includes(item.unit));
-    }
-
-    baseList.sort(() => Math.random() - 0.5);
-    currentQuizList = baseList.slice(0, countLimit);
-
-    if (currentQuizList.length === 0) {
-      document.getElementById('q-meaning').innerText = "선택된 단원의 학습 데이터가 없습니다. 단원을 선택해주세요!";
-      document.getElementById('input-container').style.display = 'none';
-      document.getElementById('choices-container').style.display = 'none';
-      document.getElementById('hint-container').style.display = 'none';
+    if (mode === 'wrong' && wrongList.length === 0) {
+      alert("🎉 저장된 오답이 없습니다! 스마트 출제 모드로 전환합니다.");
+      setMode('normal');
       return;
     }
-
-    loadStage();
+    sessionIndex = 0;
+    loadNextQuestion();
   }
 
-  function loadStage() {
-    if (currentIndex >= currentQuizList.length || lives <= 0) {
-      showSummary();
-      return;
+  function setQuizType(type) {
+    quizType = type;
+    document.getElementById('type-fill').classList.toggle('active', type === 'fill');
+    document.getElementById('type-subjective').classList.toggle('active', type === 'subjective');
+    document.getElementById('type-choice').classList.toggle('active', type === 'choice');
+    loadNextQuestion();
+  }
+
+  function setLimit(num) {
+    sessionLimit = num;
+    document.querySelectorAll('.session-bar .count-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.innerText.includes(num === 999 ? 'MAX' : num));
+    });
+    sessionIndex = 0;
+    loadNextQuestion();
+  }
+
+  function getFilteredPool() {
+    let pool = (window.expressionsData || []).filter(item => selectedUnits.has(item.unit));
+    if (currentMode === 'wrong') {
+      pool = wrongList;
     }
+    return pool;
+  }
 
-    currentQuestion = currentQuizList[currentIndex];
-    
-    document.getElementById('stage-val').innerText = `${currentIndex + 1} / ${currentQuizList.length}`;
-    document.getElementById('score-val').innerText = score;
-    document.getElementById('life-val').innerText = '❤️'.repeat(lives);
-
-    document.getElementById('q-unit').innerText = currentQuestion.unit;
-    document.getElementById('q-meaning').innerText = `뜻: "${currentQuestion.meaning}"`;
-
-    document.getElementById('result-box').style.display = 'none';
+  function loadNextQuestion() {
+    const pool = getFilteredPool();
     document.getElementById('next-btn').style.display = 'none';
-    document.getElementById('hint-text-box').style.display = 'none';
+    document.getElementById('result-box').style.display = 'none';
+    document.getElementById('hint-box').style.display = 'none';
+    document.getElementById('hint-btn').style.display = 'none';
 
-    const inputContainer = document.getElementById('input-container');
-    const choicesContainer = document.getElementById('choices-container');
-    const hintContainer = document.getElementById('hint-container');
-    const blankDisplay = document.getElementById('q-blank-display');
+    if (pool.length === 0) {
+      document.getElementById('question-text').innerHTML = "선택된 파일에 학습 데이터가 없습니다. 노트를 체크해 주세요!";
+      return;
+    }
 
-    inputContainer.style.display = 'none';
-    choicesContainer.style.display = 'none';
-    hintContainer.style.display = 'none';
-    blankDisplay.style.display = 'none';
+    if (sessionIndex >= sessionLimit) {
+      document.getElementById('question-text').innerHTML = `🎉 세션 완료!<br><br>총 ${sessionLimit}문제를 모두 풀었습니다.<br>최종 SCORE: ${score}`;
+      document.getElementById('input-group').style.display = 'none';
+      document.getElementById('mc-container').style.display = 'none';
+      return;
+    }
 
-    document.getElementById('user-input').value = '';
-    document.getElementById('user-input').disabled = false;
-    document.getElementById('submit-btn').disabled = false;
+    const randIdx = Math.floor(Math.random() * pool.length);
+    currentQuestion = pool[randIdx];
+    sessionIndex++;
 
-    if (quizMode === 'blank') {
-      inputContainer.style.display = 'flex';
-      blankDisplay.style.display = 'block';
+    document.getElementById('stage-num').innerText = sessionIndex;
+    const progressPct = Math.min(100, Math.round((sessionIndex / Math.min(sessionLimit, pool.length)) * 100));
+    document.getElementById('progress-bar').style.width = progressPct + '%';
+
+    document.getElementById('unit-tag').innerText = currentQuestion.unit;
+
+    // 모드별 화면 구성
+    if (quizType === 'choice') {
+      document.getElementById('input-group').style.display = 'none';
+      document.getElementById('mc-container').style.display = 'flex';
+      setupMultipleChoice(currentQuestion, pool);
+    } else {
+      document.getElementById('input-group').style.display = 'flex';
+      document.getElementById('mc-container').style.display = 'none';
       
-      const words = currentQuestion.expression.trim().split(/\s+/);
-      if (words.length > 1) {
-        const targetIdx = Math.floor(Math.random() * words.length);
-        currentQuestion._blankWord = words[targetIdx];
-        const displayWords = words.map((w, idx) => idx === targetIdx ? '____' : w);
-        blankDisplay.innerText = displayWords.join(' ');
-      } else {
-        currentQuestion._blankWord = currentQuestion.expression;
-        blankDisplay.innerText = '____';
+      const inputEl = document.getElementById('user-input');
+      inputEl.value = '';
+      inputEl.disabled = false;
+      document.getElementById('submit-btn').disabled = false;
+      inputEl.focus();
+
+      if (quizType === 'fill') {
+        setupFillBlank(currentQuestion);
+      } else if (quizType === 'subjective') {
+        document.getElementById('question-text').innerHTML = `💡 다음 뜻에 알맞은 영어 표현을 적으세요:<br><br>"<strong style="color:#f59e0b;">${currentQuestion.meaning}</strong>"`;
+        document.getElementById('hint-btn').style.display = 'block';
       }
-      document.getElementById('user-input').focus();
-
-    } else if (quizMode === 'subjective') {
-      inputContainer.style.display = 'flex';
-      hintContainer.style.display = 'block';
-      document.getElementById('user-input').focus();
-
-    } else if (quizMode === 'objective') {
-      choicesContainer.style.display = 'grid';
-      generateChoices();
     }
   }
 
-  function showSubjectiveHint() {
-    const hintBox = document.getElementById('hint-text-box');
-    const expr = currentQuestion.expression;
-    const hintStr = expr.split(' ').map(word => {
-      if (word.length <= 1) return word;
-      return word[0] + ' ' + '_ '.repeat(word.length - 2) + word[word.length - 1];
-    }).join('   ');
-
-    hintBox.innerText = `💡 힌트: ${hintStr}`;
-    hintBox.style.display = 'block';
+  function setupFillBlank(q) {
+    const words = q.expression.split(' ');
+    if (words.length > 1) {
+      const blankIdx = Math.floor(Math.random() * words.length);
+      const targetWord = words[blankIdx];
+      const maskedWords = words.map((w, idx) => idx === blankIdx ? '____' : w);
+      q._targetWord = targetWord;
+      document.getElementById('question-text').innerHTML = `💬 빈칸에 들어갈 단어를 채우세요:<br><br>"<strong style="color:#38bdf8; font-size:20px;">${maskedWords.join(' ')}</strong>"<br><br><small style="color:#94a3b8;">뜻: ${q.meaning}</small>`;
+    } else {
+      q._targetWord = q.expression;
+      document.getElementById('question-text').innerHTML = `💬 빈칸에 들어갈 표현을 적으세요:<br><br>"<strong style="color:#38bdf8; font-size:20px;">[   ____   ]</strong>"<br><br><small style="color:#94a3b8;">뜻: ${q.meaning}</small>`;
+    }
   }
 
-  function generateChoices() {
-    const choicesContainer = document.getElementById('choices-container');
-    choicesContainer.innerHTML = '';
+  function showHint() {
+    if (!currentQuestion) return;
+    const words = currentQuestion.expression.split(' ');
+    const hintStr = words.map(w => {
+      if (w.length <= 1) return w;
+      return w[0] + ' ' + '_ '.repeat(w.length - 1).trim();
+    }).join('   ');
+    
+    const box = document.getElementById('hint-box');
+    box.innerText = `힌트: ${hintStr}`;
+    box.style.display = 'block';
+  }
 
-    const correctExpr = currentQuestion.expression;
-    let wrongPool = allExpressions.filter(item => item.expression !== correctExpr);
-    wrongPool.sort(() => Math.random() - 0.5);
-
-    const choices = [correctExpr, ...wrongPool.slice(0, 3).map(i => i.expression)];
+  function setupMultipleChoice(q, pool) {
+    document.getElementById('question-text').innerHTML = `💡 다음 뜻에 알맞은 영어 표현을 고르세요:<br><br>"<strong style="color:#f59e0b;">${q.meaning}</strong>"`;
+    
+    let choices = [q.expression];
+    let allExpressions = (window.expressionsData || []).map(i => i.expression).filter(e => e !== q.expression);
+    
+    while (choices.length < 4 && allExpressions.length > 0) {
+      const rIdx = Math.floor(Math.random() * allExpressions.length);
+      choices.push(allExpressions[rIdx]);
+      allExpressions.splice(rIdx, 1);
+    }
+    
     choices.sort(() => Math.random() - 0.5);
 
-    choices.forEach(choiceText => {
+    const container = document.getElementById('mc-container');
+    container.innerHTML = '';
+    choices.forEach((cText, idx) => {
       const btn = document.createElement('button');
-      btn.className = 'choice-btn';
-      btn.innerText = choiceText;
-      btn.onclick = () => checkChoice(choiceText);
-      choicesContainer.appendChild(btn);
+      btn.className = 'mc-btn';
+      btn.innerHTML = `<strong>${idx+1}.</strong> ${cText}`;
+      btn.onclick = () => evaluateAnswer(cText);
+      container.appendChild(btn);
     });
   }
 
   function submitAnswer() {
-    const userVal = document.getElementById('user-input').value.trim();
-    if (!userVal) return;
+    const val = document.getElementById('user-input').value.trim();
+    if (!val) return;
+    evaluateAnswer(val);
+  }
 
-    if (quizMode === 'blank') {
-      const targetWord = currentQuestion._blankWord.toLowerCase();
-      const fullExpr = currentQuestion.expression.toLowerCase();
-      const userLower = userVal.toLowerCase();
+  function evaluateAnswer(userVal) {
+    const resultBox = document.getElementById('result-box');
+    const uVal = userVal.toLowerCase();
+    
+    let isCorrect = false;
+    let targetAnswer = currentQuestion.expression;
 
-      if (userLower === targetWord || userLower === fullExpr) {
-        handleResult(true);
-      } else {
-        handleResult(false);
+    if (quizType === 'fill' && currentQuestion._targetWord) {
+      const targetW = currentQuestion._targetWord.toLowerCase();
+      if (uVal === targetW || uVal === currentQuestion.expression.toLowerCase()) {
+        isCorrect = true;
       }
     } else {
-      const target = currentQuestion.expression.trim().toLowerCase();
-      if (userVal.toLowerCase() === target) {
-        handleResult(true);
-      } else {
-        handleResult(false);
+      if (uVal === targetAnswer.toLowerCase()) {
+        isCorrect = true;
       }
     }
-  }
-
-  function checkChoice(selectedText) {
-    const isCorrect = (selectedText === currentQuestion.expression);
-    handleResult(isCorrect);
-  }
-
-  function handleResult(isCorrect) {
-    const resultBox = document.getElementById('result-box');
-    document.getElementById('user-input').disabled = true;
-    document.getElementById('submit-btn').disabled = true;
 
     if (isCorrect) {
-      score += 100;
-      resultBox.className = "result-box correct";
-      resultBox.innerHTML = `🎉 PERFECT! 정답입니다!<br>정답: <strong>${currentQuestion.expression}</strong>`;
-      
-      if (quizMode === 'wrong') {
-        wrongNotes = wrongNotes.filter(item => item.id !== currentQuestion.id);
-        localStorage.setItem('retro_wrong_notes', JSON.stringify(wrongNotes));
-        updateWrongCountUI();
+      score += 10;
+      document.getElementById('score-val').innerText = score;
+      resultBox.className = 'result-box correct';
+
+      // ⭐️ 오답노트 모드에서 맞히면 오답노트에서 해당 문제 자동 삭제!
+      if (currentMode === 'wrong') {
+        wrongList = wrongList.filter(item => item.id !== currentQuestion.id);
+        saveWrongList();
+        resultBox.innerHTML = `🎉 정답입니다! (오답노트에서 삭제됨)<br>정답: <strong>${currentQuestion.expression}</strong>`;
+      } else {
+        resultBox.innerHTML = `🎉 정답입니다!<br>정답: <strong>${currentQuestion.expression}</strong>`;
       }
     } else {
-      lives -= 1;
-      resultBox.className = "result-box wrong";
-      resultBox.innerHTML = `❌ MISS! 아쉽네요.<br>정답: <strong>${currentQuestion.expression}</strong>`;
-
-      if (!wrongNotes.some(item => item.id === currentQuestion.id)) {
-        wrongNotes.push(currentQuestion);
-        localStorage.setItem('retro_wrong_notes', JSON.stringify(wrongNotes));
-        updateWrongCountUI();
+      lives--;
+      let hearts = '❤️'.repeat(Math.max(0, lives));
+      document.getElementById('lives-display').innerText = hearts || '💀';
+      
+      resultBox.className = 'result-box wrong';
+      resultBox.innerHTML = `❌ 아쉽네요!<br>입력답: ${userVal}<br>정답: <strong>${currentQuestion.expression}</strong>`;
+      
+      // 오답노트에 추가
+      if (!wrongList.some(item => item.id === currentQuestion.id)) {
+        wrongList.push(currentQuestion);
+        saveWrongList();
       }
     }
 
-    document.getElementById('score-val').innerText = score;
-    document.getElementById('life-val').innerText = '❤️'.repeat(Math.max(0, lives));
-
     resultBox.style.display = 'block';
+    
+    if (quizType !== 'choice') {
+      document.getElementById('user-input').disabled = true;
+      document.getElementById('submit-btn').disabled = true;
+    } else {
+      document.querySelectorAll('.mc-btn').forEach(btn => btn.disabled = true);
+    }
+
     document.getElementById('next-btn').style.display = 'block';
   }
 
   function nextQuestion() {
-    currentIndex++;
-    loadStage();
+    // ⭐️ 오답노트 모드에서 오답을 다 지웠는지 확인
+    if (currentMode === 'wrong' && wrongList.length === 0) {
+      alert("🎉 축하합니다! 오답노트의 모든 문제를 정답으로 맞혀 오답노트가 비었습니다!");
+      setMode('normal');
+      return;
+    }
+    loadNextQuestion();
   }
 
-  function showSummary() {
-    document.getElementById('game-container').style.display = 'none';
-    const summaryBox = document.getElementById('summary-container');
-    summaryBox.style.display = 'block';
-
-    const totalQ = currentQuizList.length;
-    const summaryText = `
-      최종 점수: <strong style="color:#f59e0b; font-size:20px;">${score}점</strong><br><br>
-      총 ${totalQ}개 스테이지 중 도전 완료!<br>
-      남은 목숨: ${'❤️'.repeat(Math.max(0, lives))} (${lives}개)<br>
-      오답노트에 총 ${wrongNotes.length}개의 복습 표현이 저장되어 있습니다.
-    `;
-    document.getElementById('summary-text').innerHTML = summaryText;
-  }
-
-  initApp();
+  // 초기화
+  initFiles();
+  loadNextQuestion();
 </script>
 
 </body>

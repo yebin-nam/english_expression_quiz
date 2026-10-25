@@ -339,7 +339,7 @@ window.expressionsData = [
     "meaning": "귀찮게 굴지 마",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907369.0612268
+    "last_modified": 1792913455.8377964
   },
   {
     "id": 39,
@@ -348,7 +348,7 @@ window.expressionsData = [
     "meaning": "자신감을 가져",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907369.0612268
+    "last_modified": 1792913455.8377964
   },
   {
     "id": 40,
@@ -357,7 +357,7 @@ window.expressionsData = [
     "meaning": "날씨가 어때?",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907369.0612268
+    "last_modified": 1792913455.8377964
   },
   {
     "id": 41,
@@ -366,7 +366,7 @@ window.expressionsData = [
     "meaning": "느낌이 들어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907369.0612268
+    "last_modified": 1792913455.8377964
   },
   {
     "id": 42,
@@ -375,16 +375,16 @@ window.expressionsData = [
     "meaning": "여행을 취소하다",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907369.0612268
+    "last_modified": 1792913455.8377964
   },
   {
     "id": 43,
     "unit": "Learning English 27",
     "expression": "Slipped my mind",
-    "meaning": "깜박했어",
+    "meaning": "깜빡했어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907369.0612268
+    "last_modified": 1792913455.8377964
   },
   {
     "id": 44,
@@ -393,7 +393,7 @@ window.expressionsData = [
     "meaning": "내 뒤에서, 나 몰래",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907369.0612268
+    "last_modified": 1792913455.8377964
   },
   {
     "id": 45,
@@ -402,7 +402,7 @@ window.expressionsData = [
     "meaning": "흘러가는 대로, 대세를 따르다",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907369.0612268
+    "last_modified": 1792913455.8377964
   },
   {
     "id": 46,
@@ -411,43 +411,43 @@ window.expressionsData = [
     "meaning": "생각해 보니",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907369.0612268
+    "last_modified": 1792913455.8377964
   },
   {
     "id": 47,
     "unit": "Learning English 27",
     "expression": "I can't miss this",
-    "meaning": "농 칠 수 없지",
+    "meaning": "놓칠 수 없지",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907369.0612268
+    "last_modified": 1792913455.8377964
   },
   {
     "id": 48,
     "unit": "Learning English 27",
     "expression": "That's it",
-    "meaning": "이거야, 바로 그 거야",
+    "meaning": "이거야, 바로 그거야",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907369.0612268
+    "last_modified": 1792913455.8377964
   },
   {
     "id": 49,
     "unit": "Learning English 27",
     "expression": "I might as well",
-    "meaning": "~ 하는 게 좋을 것 같아",
+    "meaning": "~(이왕 이렇게 된거)하는 게 좋을 것 같아",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907369.0612268
+    "last_modified": 1792913455.8377964
   },
   {
     "id": 50,
     "unit": "Learning English 26",
     "expression": "Look who's here!",
-    "meaning": "아니 이게 누구애!",
+    "meaning": "아니 이게 누구야!",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907366.0515957
+    "last_modified": 1792912926.4698126
   },
   {
     "id": 51,
@@ -456,7 +456,7 @@ window.expressionsData = [
     "meaning": "세상 좁구나",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907366.0515957
+    "last_modified": 1792912926.4698126
   },
   {
     "id": 52,
@@ -465,7 +465,7 @@ window.expressionsData = [
     "meaning": "난 잘 지내",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907366.0515957
+    "last_modified": 1792912926.4698126
   },
   {
     "id": 53,
@@ -474,7 +474,7 @@ window.expressionsData = [
     "meaning": "안부 전해 줘",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907366.0515957
+    "last_modified": 1792912926.4698126
   },
   {
     "id": 54,
@@ -483,7 +483,7 @@ window.expressionsData = [
     "meaning": "계속 연락하자",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907366.0515957
+    "last_modified": 1792912926.4698126
   },
   {
     "id": 55,
@@ -492,16 +492,16 @@ window.expressionsData = [
     "meaning": "만나서 반가워",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907366.0515957
+    "last_modified": 1792912926.4698126
   },
   {
     "id": 56,
     "unit": "Learning English 26",
     "expression": "What a surprise",
-    "meaning": "이게 누구야",
+    "meaning": "이게 누구야(비꼼)",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907366.0515957
+    "last_modified": 1792912926.4698126
   },
   {
     "id": 57,
@@ -510,7 +510,7 @@ window.expressionsData = [
     "meaning": "그 동안 어떻게 지냈어?",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907366.0515957
+    "last_modified": 1792912926.4698126
   },
   {
     "id": 58,
@@ -519,7 +519,7 @@ window.expressionsData = [
     "meaning": "하나도 안 변했다",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907366.0515957
+    "last_modified": 1792912926.4698126
   },
   {
     "id": 59,
@@ -528,25 +528,25 @@ window.expressionsData = [
     "meaning": "그런 말 하지 마",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907366.0515957
+    "last_modified": 1792912926.4698126
   },
   {
     "id": 60,
     "unit": "Learning English 26",
     "expression": "You shouldn't have",
-    "meaning": "그러지 말지",
+    "meaning": "그러지 말지! or 뭐 이런 걸 가져와!(너스레)",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907366.0515957
+    "last_modified": 1792912926.4698126
   },
   {
     "id": 61,
     "unit": "Learning English 26",
-    "expression": "Give me aride",
+    "expression": "Give me a ride",
     "meaning": "나 좀 태워 줘",
     "example": null,
     "has_example": false,
-    "last_modified": 1792907366.0515957
+    "last_modified": 1792912926.4698126
   },
   {
     "id": 62,

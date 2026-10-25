@@ -1,786 +1,786 @@
 window.expressionsData = [
   {
     "id": 1,
-    "unit": "Learning English 30 A",
-    "expression": "Not even close",
-    "meaning": "아직 멀었어",
+    "unit": "Learning English 29",
+    "expression": "Help me out",
+    "meaning": "도 와 줘 (casual)",
     "example": null,
     "has_example": false,
-    "last_modified": 1792904928.6964097
+    "last_modified": 1792906134.4933667
   },
   {
     "id": 2,
-    "unit": "Learning English 30 A",
-    "expression": "How come?",
-    "meaning": "Why?(Why가 조금 공격적인 느낌이 있어서 대체)",
+    "unit": "Learning English 29",
+    "expression": "Make an excuse",
+    "meaning": "변 명 하다",
     "example": null,
     "has_example": false,
-    "last_modified": 1792904928.6964097
+    "last_modified": 1792906134.4933667
   },
   {
     "id": 3,
-    "unit": "Learning English 30 A",
-    "expression": "I'm just chilling",
-    "meaning": "그냥 쉬고 있어",
+    "unit": "Learning English 29",
+    "expression": "You can't put that on me",
+    "meaning": "내 탓 을 하면 안되지",
     "example": null,
     "has_example": false,
-    "last_modified": 1792904928.6964097
+    "last_modified": 1792906134.4933667
   },
   {
     "id": 4,
-    "unit": "Learning English 30 A",
-    "expression": "I'm sober",
-    "meaning": "(전에는 술 문제 있었는데)술끊었어",
+    "unit": "Learning English 29",
+    "expression": "All you have to do is~",
+    "meaning": "~ 하기만 하면 돼",
     "example": null,
     "has_example": false,
-    "last_modified": 1792904928.6964097
+    "last_modified": 1792906134.4933667
   },
   {
     "id": 5,
-    "unit": "Learning English 30 A",
-    "expression": "I will kick your ass",
-    "meaning": "가만두지 않겠어, 뒤졌음",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792904928.6964097
-  },
-  {
-    "id": 6,
-    "unit": "Learning English 30 A",
-    "expression": "What are you up to?",
-    "meaning": "지금 뭐할 거야?",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792904928.6964097
-  },
-  {
-    "id": 7,
-    "unit": "Learning English 30 A",
-    "expression": "Do you fancy a beer?",
-    "meaning": "맥주 좋아해?",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792904928.6964097
-  },
-  {
-    "id": 8,
-    "unit": "Learning English 30 A",
-    "expression": "I'm on fire",
-    "meaning": "나 오늘 불붙었어",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792904928.6964097
-  },
-  {
-    "id": 9,
-    "unit": "Learning English 30 A",
-    "expression": "I'd rather not say",
-    "meaning": "말 안하는게 좋을 것 같아",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792904928.6964097
-  },
-  {
-    "id": 10,
-    "unit": "Learning English 30 A",
-    "expression": "It's up to you",
-    "meaning": "너에게 달렸어, 너가 골라",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792904928.6964097
-  },
-  {
-    "id": 11,
-    "unit": "Learning English 30 A",
-    "expression": "I bumped into my ex",
-    "meaning": "길가다가 전애인이랑 마주쳤어",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792904928.6964097
-  },
-  {
-    "id": 12,
-    "unit": "Learning English 30 A",
-    "expression": "I'll catch up with you",
-    "meaning": "금방보자",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792904928.6964097
-  },
-  {
-    "id": 13,
-    "unit": "Learning English 29",
-    "expression": "Help me out",
-    "meaning": "도와줘 (Casual)",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792397892.4039953
-  },
-  {
-    "id": 14,
-    "unit": "Learning English 29",
-    "expression": "Make an excuse",
-    "meaning": "변명하다",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792397892.4039953
-  },
-  {
-    "id": 15,
-    "unit": "Learning English 29",
-    "expression": "You can’t put that on me",
-    "meaning": "내탓을 하면 안되지",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792397892.4039953
-  },
-  {
-    "id": 16,
-    "unit": "Learning English 29",
-    "expression": "All you have to do is~",
-    "meaning": "하기만 하면 돼",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792397892.4039953
-  },
-  {
-    "id": 17,
     "unit": "Learning English 29",
     "expression": "Want to come along?",
     "meaning": "같이 갈래?",
     "example": null,
     "has_example": false,
-    "last_modified": 1792397892.4039953
+    "last_modified": 1792906134.4933667
   },
   {
-    "id": 18,
+    "id": 6,
     "unit": "Learning English 29",
     "expression": "Hit the road",
-    "meaning": "떠나자, 여행가자",
+    "meaning": "떠나자, 여 행 가 자",
     "example": null,
     "has_example": false,
-    "last_modified": 1792397892.4039953
+    "last_modified": 1792906134.4933667
   },
   {
-    "id": 19,
+    "id": 7,
     "unit": "Learning English 29",
     "expression": "Not at all",
     "meaning": "전혀 그렇지 않아, 물론이지",
     "example": null,
     "has_example": false,
-    "last_modified": 1792397892.4039953
+    "last_modified": 1792906134.4933667
   },
   {
-    "id": 20,
+    "id": 8,
     "unit": "Learning English 29",
     "expression": "For a change",
-    "meaning": "기분전환 삼아",
+    "meaning": "기 분 전환삼아",
     "example": null,
     "has_example": false,
-    "last_modified": 1792397892.4039953
+    "last_modified": 1792906134.4933667
   },
   {
-    "id": 21,
+    "id": 9,
     "unit": "Learning English 29",
-    "expression": "I’m clumsy",
-    "meaning": "내가 좀 덤병거려",
+    "expression": "I'm clumsy",
+    "meaning": "내가 좀 Sane",
     "example": null,
     "has_example": false,
-    "last_modified": 1792397892.4039953
+    "last_modified": 1792906134.4933667
   },
   {
-    "id": 22,
+    "id": 10,
     "unit": "Learning English 29",
     "expression": "You take me for granted",
-    "meaning": "넌 날 당연하게 여기자나",
+    "meaning": "넌 날 당연하게 여기잖아",
     "example": null,
     "has_example": false,
-    "last_modified": 1792397892.4039953
+    "last_modified": 1792906134.4933667
   },
   {
-    "id": 23,
+    "id": 11,
     "unit": "Learning English 29",
     "expression": "Never take for granted the people who show you love and kindness",
-    "meaning": "당신에게 따뜻하고 다정한 사람을 당연시 여기지 마세요",
+    "meaning": "너에게 사랑과 친절을 베푸는 사람을 당연시 여기지 말아라",
     "example": null,
     "has_example": false,
-    "last_modified": 1792397892.4039953
+    "last_modified": 1792906134.4933667
   },
   {
-    "id": 24,
+    "id": 12,
     "unit": "Learning English 29",
     "expression": "Let us not take this planet for granted",
-    "meaning": "이 지구를 당연시 여기지 맙시다",
+    "meaning": "이 지구를 당연히 여기지 맙시다",
     "example": null,
     "has_example": false,
-    "last_modified": 1792397892.4039953
+    "last_modified": 1792906134.4933667
   },
   {
-    "id": 25,
+    "id": 13,
     "unit": "Learning English 29",
     "expression": "I do not take tonight for granted",
     "meaning": "오늘 밤을 당연시 여기지 않겠어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792397892.4039953
+    "last_modified": 1792906134.4933667
+  },
+  {
+    "id": 14,
+    "unit": "Learning English 30 A",
+    "expression": "Not even close",
+    "meaning": "아직 멸 었어",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906028.4770987
+  },
+  {
+    "id": 15,
+    "unit": "Learning English 30 A",
+    "expression": "How come?",
+    "meaning": "Why?",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906028.4770987
+  },
+  {
+    "id": 16,
+    "unit": "Learning English 30 A",
+    "expression": "I'm just chilling",
+    "meaning": "그냥 쉬고 있어",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906028.4770987
+  },
+  {
+    "id": 17,
+    "unit": "Learning English 30 A",
+    "expression": "I'm sober",
+    "meaning": "술 끊 었 어",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906028.4770987
+  },
+  {
+    "id": 18,
+    "unit": "Learning English 30 A",
+    "expression": "I will kick your ass",
+    "meaning": "가 만 두지 않 겠 어 , 뒤 졌음",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906028.4770987
+  },
+  {
+    "id": 19,
+    "unit": "Learning English 30 A",
+    "expression": "What are you up to?",
+    "meaning": "지금 뭐 할 거야?",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906028.4770987
+  },
+  {
+    "id": 20,
+    "unit": "Learning English 30 A",
+    "expression": "Do you fancy a beer?",
+    "meaning": "맥주 좋아해?",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906028.4770987
+  },
+  {
+    "id": 21,
+    "unit": "Learning English 30 A",
+    "expression": "I'm on fire",
+    "meaning": "나 오늘 불 붙 었 어",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906028.4770987
+  },
+  {
+    "id": 22,
+    "unit": "Learning English 30 A",
+    "expression": "I'd rather not say",
+    "meaning": "말 안 하 는 게 좋을 것 같아",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906028.4770987
+  },
+  {
+    "id": 23,
+    "unit": "Learning English 30 A",
+    "expression": "It's up to you",
+    "meaning": "너 에게 달 렸 어 , 너가 골라",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906028.4770987
+  },
+  {
+    "id": 24,
+    "unit": "Learning English 30 A",
+    "expression": "I bumped into my ex",
+    "meaning": "길 가 다 가 전 애 인 이랑 마 주 쳤어",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906028.4770987
+  },
+  {
+    "id": 25,
+    "unit": "Learning English 30 A",
+    "expression": "I'll catch up with you",
+    "meaning": "금 방 보자",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906028.4770987
   },
   {
     "id": 26,
-    "unit": "Learning English 26",
-    "expression": "Look who’s here!",
-    "meaning": "아니 이게누구야!",
+    "unit": "Learning English 28",
+    "expression": "Care for some coffee?",
+    "meaning": "커피 마 실 래 ?",
     "example": null,
     "has_example": false,
-    "last_modified": 1792392363.1331892
+    "last_modified": 1792906024.1208508
   },
   {
     "id": 27,
-    "unit": "Learning English 26",
-    "expression": "Small world",
-    "meaning": "세상 좁구나",
+    "unit": "Learning English 28",
+    "expression": "Got some connections",
+    "meaning": "아는 사 람 이 있어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792392363.1331892
+    "last_modified": 1792906024.1208508
   },
   {
     "id": 28,
-    "unit": "Learning English 26",
-    "expression": "I’m doing great",
-    "meaning": "난 잘지내",
+    "unit": "Learning English 28",
+    "expression": "I knew it",
+    "meaning": "그 럴 줄 알았어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792392363.1331892
+    "last_modified": 1792906024.1208508
   },
   {
     "id": 29,
-    "unit": "Learning English 26",
-    "expression": "Say hello to your father",
-    "meaning": "안부전해줘",
+    "unit": "Learning English 28",
+    "expression": "I'm a big fan of his song",
+    "meaning": "그의 노래 완전 팬 이야",
     "example": null,
     "has_example": false,
-    "last_modified": 1792392363.1331892
+    "last_modified": 1792906024.1208508
   },
   {
     "id": 30,
-    "unit": "Learning English 26",
-    "expression": "Keep in touch",
-    "meaning": "계속 연락하자",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392363.1331892
-  },
-  {
-    "id": 31,
-    "unit": "Learning English 26",
-    "expression": "Fancy meeting you",
-    "meaning": "만나서 반가워",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392363.1331892
-  },
-  {
-    "id": 32,
-    "unit": "Learning English 26",
-    "expression": "What a surprise",
-    "meaning": "이게 누구야",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392363.1331892
-  },
-  {
-    "id": 33,
-    "unit": "Learning English 26",
-    "expression": "How have you been?",
-    "meaning": "그동안 어떻게 지냈어?",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392363.1331892
-  },
-  {
-    "id": 34,
-    "unit": "Learning English 26",
-    "expression": "You haven't changed a bit",
-    "meaning": "하나도 안변했다",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392363.1331892
-  },
-  {
-    "id": 35,
-    "unit": "Learning English 26",
-    "expression": "Don’t mention it",
-    "meaning": "그런말 하지마",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392363.1331892
-  },
-  {
-    "id": 36,
-    "unit": "Learning English 26",
-    "expression": "You shouldn’t have",
-    "meaning": "그러지 말지",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392363.1331892
-  },
-  {
-    "id": 37,
-    "unit": "Learning English 26",
-    "expression": "Give me a ride",
-    "meaning": "나좀 태워줘",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392363.1331892
-  },
-  {
-    "id": 38,
-    "unit": "Learning English 25 A",
-    "expression": "Sassy girl",
-    "meaning": "새침, 도도",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392350.1169198
-  },
-  {
-    "id": 39,
-    "unit": "Learning English 25 A",
-    "expression": "Carry on",
-    "meaning": "계속해",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392350.1169198
-  },
-  {
-    "id": 40,
-    "unit": "Learning English 25 A",
-    "expression": "Every other month",
-    "meaning": "격달로",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392350.1169198
-  },
-  {
-    "id": 41,
-    "unit": "Learning English 25 A",
-    "expression": "Fair enough",
-    "meaning": "알았어 , 어쩔 수 없지",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392350.1169198
-  },
-  {
-    "id": 42,
-    "unit": "Learning English 25 A",
-    "expression": "Getting there?",
-    "meaning": "다됐어?",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392350.1169198
-  },
-  {
-    "id": 43,
-    "unit": "Learning English 25 A",
-    "expression": "I’m nearly done",
-    "meaning": "거의 다됐어",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392350.1169198
-  },
-  {
-    "id": 44,
-    "unit": "Learning English 25 A",
-    "expression": "I will get back to you",
-    "meaning": "다시 연락줄게",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392350.1169198
-  },
-  {
-    "id": 45,
-    "unit": "Learning English 25 A",
-    "expression": "ASAP",
-    "meaning": "As soon as possible",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392350.1169198
-  },
-  {
-    "id": 46,
-    "unit": "Learning English 25 A",
-    "expression": "She is taken",
-    "meaning": "임자있는 여자",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392350.1169198
-  },
-  {
-    "id": 47,
-    "unit": "Learning English 25 A",
-    "expression": "Make it two",
-    "meaning": "똑같은걸로 두개",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392350.1169198
-  },
-  {
-    "id": 48,
-    "unit": "Learning English 25 A",
-    "expression": "Stop Flirting",
-    "meaning": "작업(?) 그만해, 관심",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392350.1169198
-  },
-  {
-    "id": 49,
-    "unit": "Learning English 25 A",
-    "expression": "Don’t be Picky",
-    "meaning": "까다롭게 굴지마",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392350.1169198
-  },
-  {
-    "id": 50,
-    "unit": "Learning English 24 A",
-    "expression": "Behave yourself",
-    "meaning": "문제 일으키면 안돼 (장난)",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392317.9190118
-  },
-  {
-    "id": 51,
-    "unit": "Learning English 24 A",
-    "expression": "I’m afraid so",
-    "meaning": "유감스럽지만 그게맞아",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392317.9190118
-  },
-  {
-    "id": 52,
-    "unit": "Learning English 24 A",
-    "expression": "Sorry for inconvenience",
-    "meaning": "불편을 드려서 죄송합니다",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392317.9190118
-  },
-  {
-    "id": 53,
-    "unit": "Learning English 24 A",
-    "expression": "Smoking gun",
-    "meaning": "결정적인 증거",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392317.9190118
-  },
-  {
-    "id": 54,
-    "unit": "Learning English 24 A",
-    "expression": "Sugar coated",
-    "meaning": "사탕발림, 빈말",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392317.9190118
-  },
-  {
-    "id": 55,
-    "unit": "Learning English 24 A",
-    "expression": "As matter of fact",
-    "meaning": "사실은",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392317.9190118
-  },
-  {
-    "id": 56,
-    "unit": "Learning English 24 A",
-    "expression": "No matter (what you do)",
-    "meaning": "비록 무엇이~일지라도",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392317.9190118
-  },
-  {
-    "id": 57,
-    "unit": "Learning English 24 A",
-    "expression": "I tell you what",
-    "meaning": "이렇게 하자 (제안)",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392317.9190118
-  },
-  {
-    "id": 58,
-    "unit": "Learning English 24 A",
-    "expression": "Let me be clear",
-    "meaning": "분명히 말하는데 (타협×)",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392317.9190118
-  },
-  {
-    "id": 59,
-    "unit": "Learning English 24 A",
-    "expression": "Get me?",
-    "meaning": "알아는 들어?",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392317.9190118
-  },
-  {
-    "id": 60,
-    "unit": "Learning English 24 A",
-    "expression": "I wasn’t born yesterday",
-    "meaning": "나도 알긴 알아요",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392317.9190118
-  },
-  {
-    "id": 61,
-    "unit": "Learning English 24 A",
-    "expression": "Bigger fish to fry",
-    "meaning": "일단 먼저 할게 있어",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792392317.9190118
-  },
-  {
-    "id": 62,
-    "unit": "Learning English 28",
-    "expression": "Care for some coffee?",
-    "meaning": "커피 마실래?",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792391942.2627094
-  },
-  {
-    "id": 63,
-    "unit": "Learning English 28",
-    "expression": "Got some connections",
-    "meaning": "아는 사람이 있어",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792391942.2627094
-  },
-  {
-    "id": 64,
-    "unit": "Learning English 28",
-    "expression": "I knew it",
-    "meaning": "그럴줄 알았어",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792391942.2627094
-  },
-  {
-    "id": 65,
-    "unit": "Learning English 28",
-    "expression": "I’m a big fan of his song",
-    "meaning": "그의 노래 완전 팬이야",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792391942.2627094
-  },
-  {
-    "id": 66,
     "unit": "Learning English 28",
     "expression": "Go easy on it",
     "meaning": "적당히 해",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391942.2627094
+    "last_modified": 1792906024.1208508
   },
   {
-    "id": 67,
+    "id": 31,
     "unit": "Learning English 28",
-    "expression": "It’s not gonna kill you",
-    "meaning": "그거한다고 큰일안나",
+    "expression": "It's not gonna kill you",
+    "meaning": "그 거 한다고 큰 일 안나",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391942.2627094
+    "last_modified": 1792906024.1208508
   },
   {
-    "id": 68,
+    "id": 32,
     "unit": "Learning English 28",
     "expression": "Look at the bright side",
-    "meaning": "긍정적으로 생각해",
+    "meaning": "긍 정 적 으로 생각해",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391942.2627094
+    "last_modified": 1792906024.1208508
   },
   {
-    "id": 69,
+    "id": 33,
     "unit": "Learning English 28",
     "expression": "Sorry to keep you waiting",
-    "meaning": "오래 기다리게해서 미안해",
+    "meaning": "오래 기 다 리 게 해서 미안해",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391942.2627094
+    "last_modified": 1792906024.1208508
   },
   {
-    "id": 70,
+    "id": 34,
     "unit": "Learning English 28",
     "expression": "The most convenient time",
-    "meaning": "제일 편한시간",
+    "meaning": "제일 편 한 시간",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391942.2627094
+    "last_modified": 1792906024.1208508
   },
   {
-    "id": 71,
+    "id": 35,
     "unit": "Learning English 28",
     "expression": "Got ya/Got it",
     "meaning": "알았어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391942.2627094
+    "last_modified": 1792906024.1208508
+  },
+  {
+    "id": 36,
+    "unit": "Learning English 28",
+    "expression": "Make no difference",
+    "meaning": "차 이 가 없다",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906024.1208508
+  },
+  {
+    "id": 37,
+    "unit": "Learning English 28",
+    "expression": "Can you give me a hand?",
+    "meaning": "좀 도 와 줄 래요?",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906024.1208508
+  },
+  {
+    "id": 38,
+    "unit": "Learning English 27",
+    "expression": "Don't bother",
+    "meaning": "귀찮게 굴 지 마",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906022.2521546
+  },
+  {
+    "id": 39,
+    "unit": "Learning English 27",
+    "expression": "Be who you are",
+    "meaning": "자 신 감 을 가져",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906022.2521546
+  },
+  {
+    "id": 40,
+    "unit": "Learning English 27",
+    "expression": "What's the weather like?",
+    "meaning": "날 씨 가 어때?",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906022.2521546
+  },
+  {
+    "id": 41,
+    "unit": "Learning English 27",
+    "expression": "Got a feeling",
+    "meaning": "느 낌 이 들어",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906022.2521546
+  },
+  {
+    "id": 42,
+    "unit": "Learning English 27",
+    "expression": "Call off our trip",
+    "meaning": "여 행 을 취 소 하다",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906022.2521546
+  },
+  {
+    "id": 43,
+    "unit": "Learning English 27",
+    "expression": "Slipped my mind",
+    "meaning": "깜 박 했어",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906022.2521546
+  },
+  {
+    "id": 44,
+    "unit": "Learning English 27",
+    "expression": "Behind my back",
+    "meaning": "내 뒤에서, 나 몰 래",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906022.2521546
+  },
+  {
+    "id": 45,
+    "unit": "Learning English 27",
+    "expression": "Go with the flow",
+    "meaning": "흘 러 가 는 대로, 대 세 를 따 르 다",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906022.2521546
+  },
+  {
+    "id": 46,
+    "unit": "Learning English 27",
+    "expression": "Come to think of it",
+    "meaning": "생 각 해 보니",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906022.2521546
+  },
+  {
+    "id": 47,
+    "unit": "Learning English 27",
+    "expression": "I can't miss this",
+    "meaning": "농 칠수 없지",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906022.2521546
+  },
+  {
+    "id": 48,
+    "unit": "Learning English 27",
+    "expression": "That's it",
+    "meaning": "이 거 야 , 바로 그거야",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906022.2521546
+  },
+  {
+    "id": 49,
+    "unit": "Learning English 27",
+    "expression": "I might as well",
+    "meaning": "~ 하 는 게 좋을것 같아",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906022.2521546
+  },
+  {
+    "id": 50,
+    "unit": "Learning English 26",
+    "expression": "Look who's here!",
+    "meaning": "아니 이 게 누 구 애 !",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906020.349818
+  },
+  {
+    "id": 51,
+    "unit": "Learning English 26",
+    "expression": "Small world",
+    "meaning": "세상 좁 구나",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906020.349818
+  },
+  {
+    "id": 52,
+    "unit": "Learning English 26",
+    "expression": "I'm doing great",
+    "meaning": "난 잘 지내",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906020.349818
+  },
+  {
+    "id": 53,
+    "unit": "Learning English 26",
+    "expression": "Say hello to your father",
+    "meaning": "안 부 전 해 줘",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906020.349818
+  },
+  {
+    "id": 54,
+    "unit": "Learning English 26",
+    "expression": "Keep in touch",
+    "meaning": "계속 연 락 하자",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906020.349818
+  },
+  {
+    "id": 55,
+    "unit": "Learning English 26",
+    "expression": "Fancy meeting you",
+    "meaning": "만나서 반가워",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906020.349818
+  },
+  {
+    "id": 56,
+    "unit": "Learning English 26",
+    "expression": "What a surprise",
+    "meaning": "이게 누구야",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906020.349818
+  },
+  {
+    "id": 57,
+    "unit": "Learning English 26",
+    "expression": "How have you been?",
+    "meaning": "그동안 어떻게 지 냈 어 ?",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906020.349818
+  },
+  {
+    "id": 58,
+    "unit": "Learning English 26",
+    "expression": "You haven't changed a bit",
+    "meaning": "하나도 안 변 했다",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906020.349818
+  },
+  {
+    "id": 59,
+    "unit": "Learning English 26",
+    "expression": "Don't mention it",
+    "meaning": "그 런 말 하지마",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906020.349818
+  },
+  {
+    "id": 60,
+    "unit": "Learning English 26",
+    "expression": "You shouldn't have",
+    "meaning": "그러지 말지",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906020.349818
+  },
+  {
+    "id": 61,
+    "unit": "Learning English 26",
+    "expression": "Give me aride",
+    "meaning": "나좀 태 워 줘",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906020.349818
+  },
+  {
+    "id": 62,
+    "unit": "Learning English 25 A",
+    "expression": "Sassy girl",
+    "meaning": "새침, 도도",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906018.50263
+  },
+  {
+    "id": 63,
+    "unit": "Learning English 25 A",
+    "expression": "Carry on",
+    "meaning": "계속해",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906018.50263
+  },
+  {
+    "id": 64,
+    "unit": "Learning English 25 A",
+    "expression": "Every other month",
+    "meaning": "격 달로",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906018.50263
+  },
+  {
+    "id": 65,
+    "unit": "Learning English 25 A",
+    "expression": "Fair enough",
+    "meaning": "알았어 , VARA",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906018.50263
+  },
+  {
+    "id": 66,
+    "unit": "Learning English 25 A",
+    "expression": "Getting there?",
+    "meaning": "다 됐어?",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906018.50263
+  },
+  {
+    "id": 67,
+    "unit": "Learning English 25 A",
+    "expression": "I'm nearly done",
+    "meaning": "거 이 다 됐어",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906018.50263
+  },
+  {
+    "id": 68,
+    "unit": "Learning English 25 A",
+    "expression": "I will get back to you",
+    "meaning": "다시 연 락 줄 게",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906018.50263
+  },
+  {
+    "id": 69,
+    "unit": "Learning English 25 A",
+    "expression": "ASAP",
+    "meaning": "As Soon As Possible",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906018.50263
+  },
+  {
+    "id": 70,
+    "unit": "Learning English 25 A",
+    "expression": "She is taken",
+    "meaning": "임 자 있 는 여자",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906018.50263
+  },
+  {
+    "id": 71,
+    "unit": "Learning English 25 A",
+    "expression": "Make it two",
+    "meaning": "똑 같 은 걸로 두개",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906018.50263
   },
   {
     "id": 72,
-    "unit": "Learning English 28",
-    "expression": "Make no difference",
-    "meaning": "차이가 없다",
+    "unit": "Learning English 25 A",
+    "expression": "Stop Flirting",
+    "meaning": "작 업 (?) 그만해, 관심",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391942.2627094
+    "last_modified": 1792906018.50263
   },
   {
     "id": 73,
-    "unit": "Learning English 28",
-    "expression": "Can you give me a hand?",
-    "meaning": "좀 도와줄래요?",
+    "unit": "Learning English 25 A",
+    "expression": "Don't be Picky",
+    "meaning": "까다롭게 굴 지 마",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391942.2627094
+    "last_modified": 1792906018.50263
   },
   {
     "id": 74,
-    "unit": "Learning English 27",
-    "expression": "Don’t bother",
-    "meaning": "귀찮게 굴지마",
+    "unit": "Learning English 24 A",
+    "expression": "Behave yourself",
+    "meaning": "문제 일으키면 안돼 (장난)",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391940.638339
+    "last_modified": 1792906016.6143506
   },
   {
     "id": 75,
-    "unit": "Learning English 27",
-    "expression": "Be who you are",
-    "meaning": "자신감을가져",
+    "unit": "Learning English 24 A",
+    "expression": "I'm afraid so",
+    "meaning": "유 감 스럽지만 그 게 맞아",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391940.638339
+    "last_modified": 1792906016.6143506
   },
   {
     "id": 76,
-    "unit": "Learning English 27",
-    "expression": "What's the weather like?",
-    "meaning": "날씨가 어때?",
+    "unit": "Learning English 24 A",
+    "expression": "Sorry for inconvenience",
+    "meaning": "불 편 을 드려서 죄 송 합니다",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391940.638339
+    "last_modified": 1792906016.6143506
   },
   {
     "id": 77,
-    "unit": "Learning English 27",
-    "expression": "Got a feeling",
-    "meaning": "느낌이 들어",
+    "unit": "Learning English 24 A",
+    "expression": "Smoking gun",
+    "meaning": "결정적인 증거",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391940.638339
+    "last_modified": 1792906016.6143506
   },
   {
     "id": 78,
-    "unit": "Learning English 27",
-    "expression": "Call off our trip",
-    "meaning": "여행을 취소하다",
+    "unit": "Learning English 24 A",
+    "expression": "Sugar coated",
+    "meaning": "사 탕 발림, 빈 말",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391940.638339
+    "last_modified": 1792906016.6143506
   },
   {
     "id": 79,
-    "unit": "Learning English 27",
-    "expression": "Slipped my mind",
-    "meaning": "깜했어",
+    "unit": "Learning English 24 A",
+    "expression": "As matter of fact",
+    "meaning": "사 실 은",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391940.638339
+    "last_modified": 1792906016.6143506
   },
   {
     "id": 80,
-    "unit": "Learning English 27",
-    "expression": "Behind my back",
-    "meaning": "내 뒤에서, 나몰래",
+    "unit": "Learning English 24 A",
+    "expression": "No matter (what you do)",
+    "meaning": "비록 무 엇 이 ~ 일 지라도",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391940.638339
+    "last_modified": 1792906016.6143506
   },
   {
     "id": 81,
-    "unit": "Learning English 27",
-    "expression": "Go with the flow",
-    "meaning": "흘러가는대로, 대세를 따르다",
+    "unit": "Learning English 24 A",
+    "expression": "I tell you what",
+    "meaning": "이렇게 하자 (제안)",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391940.638339
+    "last_modified": 1792906016.6143506
   },
   {
     "id": 82,
-    "unit": "Learning English 27",
-    "expression": "Come to think of it",
-    "meaning": "생각해보니",
+    "unit": "Learning English 24 A",
+    "expression": "Let me be clear",
+    "meaning": "분명히 말하는데 (타협)",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391940.638339
+    "last_modified": 1792906016.6143506
   },
   {
     "id": 83,
-    "unit": "Learning English 27",
-    "expression": "I can’t miss this",
-    "meaning": "놓칠수 없지",
+    "unit": "Learning English 24 A",
+    "expression": "Get me?",
+    "meaning": "알 아 는 들어?",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391940.638339
+    "last_modified": 1792906016.6143506
   },
   {
     "id": 84,
-    "unit": "Learning English 27",
-    "expression": "That’s it",
-    "meaning": "이거야, 바로 그거야",
+    "unit": "Learning English 24 A",
+    "expression": "I wasn't born yesterday",
+    "meaning": "나도 알 긴 알아요",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391940.638339
+    "last_modified": 1792906016.6143506
   },
   {
     "id": 85,
-    "unit": "Learning English 27",
-    "expression": "I might as well",
-    "meaning": "하는게 좋을것 같아",
+    "unit": "Learning English 24 A",
+    "expression": "Bigger fish to fry",
+    "meaning": "일단 먼저 할게 있어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391940.638339
+    "last_modified": 1792906016.6143506
   },
   {
     "id": 86,
     "unit": "Learning English 23 A",
     "expression": "Room with harbour view",
-    "meaning": "하버가 보이는 방",
+    "meaning": "하 버 가 보이는 방",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391934.1095898
+    "last_modified": 1792906014.7860918
   },
   {
     "id": 87,
     "unit": "Learning English 23 A",
-    "expression": "I have a runny nose",
-    "meaning": "곳물이 난다",
+    "expression": "&#124; have arunny nose",
+    "meaning": "220] 난다",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391934.1095898
+    "last_modified": 1792906014.7860918
   },
   {
     "id": 88,
@@ -789,34 +789,34 @@ window.expressionsData = [
     "meaning": "목이 아프다",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391934.1095898
+    "last_modified": 1792906014.7860918
   },
   {
     "id": 89,
     "unit": "Learning English 23 A",
     "expression": "On the waiting list",
-    "meaning": "대기자들",
+    "meaning": "대 기 자 들",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391934.1095898
+    "last_modified": 1792906014.7860918
   },
   {
     "id": 90,
     "unit": "Learning English 23 A",
     "expression": "How long is the wait?",
-    "meaning": "얼마나 기다려야죠?",
+    "meaning": "얼마나 기 다 려 야 죠 ?",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391934.1095898
+    "last_modified": 1792906014.7860918
   },
   {
     "id": 91,
     "unit": "Learning English 23 A",
     "expression": "What can I get for you?",
-    "meaning": "뭘 드릴까요?",
+    "meaning": "뭘 드 릴 까 요 ?",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391934.1095898
+    "last_modified": 1792906014.7860918
   },
   {
     "id": 92,
@@ -825,7 +825,7 @@ window.expressionsData = [
     "meaning": "이게 다야",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391934.1095898
+    "last_modified": 1792906014.7860918
   },
   {
     "id": 93,
@@ -834,79 +834,79 @@ window.expressionsData = [
     "meaning": "네 (격식)",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391934.1095898
+    "last_modified": 1792906014.7860918
   },
   {
     "id": 94,
     "unit": "Learning English 23 A",
     "expression": "Do you have a table for five?",
-    "meaning": "5명자리 있어요?",
+    "meaning": "5 명 자리 있어요?",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391934.1095898
+    "last_modified": 1792906014.7860918
   },
   {
     "id": 95,
     "unit": "Learning English 23 A",
-    "expression": "It’s all the same to me",
-    "meaning": "나한테는 다 똑같아",
+    "expression": "It's all the same to me",
+    "meaning": "나 한 테 는 다 똑같아",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391934.1095898
+    "last_modified": 1792906014.7860918
   },
   {
     "id": 96,
     "unit": "Learning English 23 A",
     "expression": "Please stay out of trouble",
-    "meaning": "말썸 피우지마",
+    "meaning": "aba 피 우 지 마",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391934.1095898
+    "last_modified": 1792906014.7860918
   },
   {
     "id": 97,
     "unit": "Learning English 23 A",
     "expression": "Stay out of it",
-    "meaning": "상관하지마",
+    "meaning": "상 관 하지마",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391934.1095898
+    "last_modified": 1792906014.7860918
   },
   {
     "id": 98,
     "unit": "Learning English 22",
-    "expression": "Let’s get to the point",
-    "meaning": "본론으로 들어가자",
+    "expression": "Let's get to the point",
+    "meaning": "본 론 으 로 들 어 가 자",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391932.451659
+    "last_modified": 1792906013.019144
   },
   {
     "id": 99,
     "unit": "Learning English 22",
-    "expression": "I don’t feel like cooking",
-    "meaning": "요리하기 싫어",
+    "expression": "I don't feel like cooking",
+    "meaning": "요 리 하기 싫어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391932.451659
+    "last_modified": 1792906013.019144
   },
   {
     "id": 100,
     "unit": "Learning English 22",
     "expression": "There is a good chance ~",
-    "meaning": "할 가능성이 높다",
+    "meaning": "~ 할 가 능 성 이 높다",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391932.451659
+    "last_modified": 1792906013.019144
   },
   {
     "id": 101,
     "unit": "Learning English 22",
-    "expression": "That’s too bad",
-    "meaning": "안됐군",
+    "expression": "That's too bad",
+    "meaning": "안 됐 군",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391932.451659
+    "last_modified": 1792906013.019144
   },
   {
     "id": 102,
@@ -915,7 +915,7 @@ window.expressionsData = [
     "meaning": "제기랄",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391932.451659
+    "last_modified": 1792906013.019144
   },
   {
     "id": 103,
@@ -924,16 +924,16 @@ window.expressionsData = [
     "meaning": "스트레스 받다",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391932.451659
+    "last_modified": 1792906013.019144
   },
   {
     "id": 104,
     "unit": "Learning English 22",
     "expression": "The last thing I wanna do is~",
-    "meaning": "절대 ~하고 싶지 않다",
+    "meaning": "절대 ~ 하 고 싶지 않다",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391932.451659
+    "last_modified": 1792906013.019144
   },
   {
     "id": 105,
@@ -942,25 +942,25 @@ window.expressionsData = [
     "meaning": "갈 길이 멀다",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391932.451659
+    "last_modified": 1792906013.019144
   },
   {
     "id": 106,
     "unit": "Learning English 22",
-    "expression": "I’ve been out of touch",
-    "meaning": "연락이 끊겼다",
+    "expression": "I've been out of touch",
+    "meaning": "연 락 이 끊겼다",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391932.451659
+    "last_modified": 1792906013.019144
   },
   {
     "id": 107,
     "unit": "Learning English 22",
-    "expression": "Let’s dig in",
+    "expression": "Let's dig in",
     "meaning": "먹자",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391932.451659
+    "last_modified": 1792906013.019144
   },
   {
     "id": 108,
@@ -969,19 +969,253 @@ window.expressionsData = [
     "meaning": "모닝콜 해주세요",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391932.451659
+    "last_modified": 1792906013.019144
   },
   {
     "id": 109,
     "unit": "Learning English 22",
     "expression": "Fill out the form",
-    "meaning": "양식좀 작성해주세요",
+    "meaning": "양 식 좀 작 성 해 주세요",
     "example": null,
     "has_example": false,
-    "last_modified": 1792391932.451659
+    "last_modified": 1792906013.019144
   },
   {
     "id": 110,
+    "unit": "Learning English 21 A",
+    "expression": "As long as ~",
+    "meaning": "~ 하 는 한",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906011.0725234
+  },
+  {
+    "id": 111,
+    "unit": "Learning English 21 A",
+    "expression": "It's a bit obvious",
+    "meaning": "이건 좀 뻔 하 네",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906011.0725234
+  },
+  {
+    "id": 112,
+    "unit": "Learning English 21 A",
+    "expression": "Are you for real?",
+    "meaning": "진짜로 말 하 는 거야?",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906011.0725234
+  },
+  {
+    "id": 113,
+    "unit": "Learning English 21 A",
+    "expression": "Fifty-Fifty chance",
+    "meaning": "반 반 이야",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906011.0725234
+  },
+  {
+    "id": 114,
+    "unit": "Learning English 21 A",
+    "expression": "I owe you one",
+    "meaning": "너 한테 신 세 진 게 있어",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906011.0725234
+  },
+  {
+    "id": 115,
+    "unit": "Learning English 21 A",
+    "expression": "Return the favor",
+    "meaning": "보 답 하 다",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906011.0725234
+  },
+  {
+    "id": 116,
+    "unit": "Learning English 21 A",
+    "expression": "Stop showing off",
+    "meaning": "자랑 그만해",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906011.0725234
+  },
+  {
+    "id": 117,
+    "unit": "Learning English 21 A",
+    "expression": "I didn't know what to do",
+    "meaning": "당 황 했 어",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906011.0725234
+  },
+  {
+    "id": 118,
+    "unit": "Learning English 21 A",
+    "expression": "I hung out with my friend",
+    "meaning": "친 구 랑 놀 았 어",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906011.0725234
+  },
+  {
+    "id": 119,
+    "unit": "Learning English 21 A",
+    "expression": "This is Bizarre",
+    "meaning": "그거 이 상 하 다",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906011.0725234
+  },
+  {
+    "id": 120,
+    "unit": "Learning English 21 A",
+    "expression": "You look better than your photo",
+    "meaning": "실 물 이 나아요",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906011.0725234
+  },
+  {
+    "id": 121,
+    "unit": "Learning English 21 A",
+    "expression": "You drive me crazy",
+    "meaning": "너 때문에 미 치 겠 어",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906011.0725234
+  },
+  {
+    "id": 122,
+    "unit": "Learning English 20 A",
+    "expression": "Keep me posted",
+    "meaning": "계속 상황 알려줘",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906009.2225938
+  },
+  {
+    "id": 123,
+    "unit": "Learning English 20 A",
+    "expression": "Full of joy",
+    "meaning": "7&#124;#OF 가득한",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906009.2225938
+  },
+  {
+    "id": 124,
+    "unit": "Learning English 20 A",
+    "expression": "showing off",
+    "meaning": "잘난척, 자 랑 질",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906009.2225938
+  },
+  {
+    "id": 125,
+    "unit": "Learning English 20 A",
+    "expression": "Signal has been jammed",
+    "meaning": "신 호 가 안 가 네",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906009.2225938
+  },
+  {
+    "id": 126,
+    "unit": "Learning English 20 A",
+    "expression": "Bad reception",
+    "meaning": "통 화 가 안들려",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906009.2225938
+  },
+  {
+    "id": 127,
+    "unit": "Learning English 20 A",
+    "expression": "Apparently",
+    "meaning": "보아하니, 듣 자 하니",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906009.2225938
+  },
+  {
+    "id": 128,
+    "unit": "Learning English 20 A",
+    "expression": "Passed out",
+    "meaning": "기 절 하다",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906009.2225938
+  },
+  {
+    "id": 129,
+    "unit": "Learning English 20 A",
+    "expression": "Tasteful",
+    "meaning": "우아한, 고상한, 품 위 있는",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906009.2225938
+  },
+  {
+    "id": 130,
+    "unit": "Learning English 20 A",
+    "expression": "Common sense",
+    "meaning": "기본 상식",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906009.2225938
+  },
+  {
+    "id": 131,
+    "unit": "Learning English 20 A",
+    "expression": "Right on time",
+    "meaning": "제 시 간 에",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906009.2225938
+  },
+  {
+    "id": 132,
+    "unit": "Learning English 20 A",
+    "expression": "Never mind",
+    "meaning": "신 경 쓰 지 마",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906009.2225938
+  },
+  {
+    "id": 133,
+    "unit": "Learning English 20 A",
+    "expression": "That sounds really dull",
+    "meaning": "지 루 하 게 들 리 네",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906009.2225938
+  },
+  {
+    "id": 134,
+    "unit": "Learning English 20 A",
+    "expression": "The movie is about to start",
+    "meaning": "영화 시작해",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906009.2225938
+  },
+  {
+    "id": 135,
+    "unit": "Learning English 20 A",
+    "expression": "Let's get in",
+    "meaning": "들 어 가 자",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792906009.2225938
+  },
+  {
+    "id": 136,
     "unit": "Learning English 8",
     "expression": "Beer is on me",
     "meaning": "내가 맥주살게",
@@ -990,7 +1224,7 @@ window.expressionsData = [
     "last_modified": 1786941921.0206356
   },
   {
-    "id": 111,
+    "id": 137,
     "unit": "Learning English 8",
     "expression": "You got some nerve",
     "meaning": "너 정말 뻔뻔하다",
@@ -999,7 +1233,7 @@ window.expressionsData = [
     "last_modified": 1786941921.0206356
   },
   {
-    "id": 112,
+    "id": 138,
     "unit": "Learning English 8",
     "expression": "Back up a little more",
     "meaning": "뒤로 더 빼주세요",
@@ -1008,7 +1242,7 @@ window.expressionsData = [
     "last_modified": 1786941921.0206356
   },
   {
-    "id": 113,
+    "id": 139,
     "unit": "Learning English 8",
     "expression": "Guess what I got",
     "meaning": "뭔지 맞춰봐",
@@ -1017,7 +1251,7 @@ window.expressionsData = [
     "last_modified": 1786941921.0206356
   },
   {
-    "id": 114,
+    "id": 140,
     "unit": "Learning English 8",
     "expression": "I'm so glad you made it",
     "meaning": "와줘서 기뻐요",
@@ -1026,7 +1260,7 @@ window.expressionsData = [
     "last_modified": 1786941921.0206356
   },
   {
-    "id": 115,
+    "id": 141,
     "unit": "Learning English 8",
     "expression": "I'm seeing someone",
     "meaning": "만나는 사람 있어",
@@ -1035,7 +1269,7 @@ window.expressionsData = [
     "last_modified": 1786941921.0206356
   },
   {
-    "id": 116,
+    "id": 142,
     "unit": "Learning English 8",
     "expression": "I know the best coffee shop",
     "meaning": "커피잘하는데 알아",
@@ -1044,7 +1278,7 @@ window.expressionsData = [
     "last_modified": 1786941921.0206356
   },
   {
-    "id": 117,
+    "id": 143,
     "unit": "Learning English 8",
     "expression": "What's the big deal?",
     "meaning": "뭐가 대수야?",
@@ -1053,7 +1287,7 @@ window.expressionsData = [
     "last_modified": 1786941921.0206356
   },
   {
-    "id": 118,
+    "id": 144,
     "unit": "Learning English 8",
     "expression": "I have feeling for her",
     "meaning": "그녀에게 마음이 있어",
@@ -1062,7 +1296,7 @@ window.expressionsData = [
     "last_modified": 1786941921.0206356
   },
   {
-    "id": 119,
+    "id": 145,
     "unit": "Learning English 8",
     "expression": "I'm not getting involved",
     "meaning": "끼어들지 않을 거야",
@@ -1071,7 +1305,7 @@ window.expressionsData = [
     "last_modified": 1786941921.0206356
   },
   {
-    "id": 120,
+    "id": 146,
     "unit": "Learning English 8",
     "expression": "Don't be so sensitive",
     "meaning": "예민하게 굴지마",
@@ -1080,7 +1314,7 @@ window.expressionsData = [
     "last_modified": 1786941921.0206356
   },
   {
-    "id": 121,
+    "id": 147,
     "unit": "Learning English 8",
     "expression": "Don't tell me what to do",
     "meaning": "이래라저래라 하지마",
@@ -1089,7 +1323,7 @@ window.expressionsData = [
     "last_modified": 1786941921.0206356
   },
   {
-    "id": 122,
+    "id": 148,
     "unit": "Learning English 8",
     "expression": "Sorry, I brought it up",
     "meaning": "괜한 얘기를 해서 미안",
@@ -1098,7 +1332,7 @@ window.expressionsData = [
     "last_modified": 1786941921.0206356
   },
   {
-    "id": 123,
+    "id": 149,
     "unit": "Learning English 8",
     "expression": "Don't even think about it",
     "meaning": "꿈도 꾸지마",
@@ -1107,7 +1341,7 @@ window.expressionsData = [
     "last_modified": 1786941921.0206356
   },
   {
-    "id": 124,
+    "id": 150,
     "unit": "Learning English 2",
     "expression": "Don't rush me",
     "meaning": "재촉하지맛",
@@ -1116,7 +1350,7 @@ window.expressionsData = [
     "last_modified": 1786940419.3796995
   },
   {
-    "id": 125,
+    "id": 151,
     "unit": "Learning English 2",
     "expression": "That's too bad",
     "meaning": "안됐다, 어쩜 좋니",
@@ -1125,7 +1359,7 @@ window.expressionsData = [
     "last_modified": 1786940419.3796995
   },
   {
-    "id": 126,
+    "id": 152,
     "unit": "Learning English 2",
     "expression": "You got me",
     "meaning": "날 이해했구나",
@@ -1134,7 +1368,7 @@ window.expressionsData = [
     "last_modified": 1786940419.3796995
   },
   {
-    "id": 127,
+    "id": 153,
     "unit": "Learning English 2",
     "expression": "You name it",
     "meaning": "1. 말만해(다 들어줄게)2. 등등(나열)",
@@ -1143,7 +1377,7 @@ window.expressionsData = [
     "last_modified": 1786940419.3796995
   },
   {
-    "id": 128,
+    "id": 154,
     "unit": "Learning English 2",
     "expression": "What about this?",
     "meaning": "이건 어때?",
@@ -1152,7 +1386,7 @@ window.expressionsData = [
     "last_modified": 1786940419.3796995
   },
   {
-    "id": 129,
+    "id": 155,
     "unit": "Learning English 2",
     "expression": "Need some help?",
     "meaning": "도와줄까?",
@@ -1161,7 +1395,7 @@ window.expressionsData = [
     "last_modified": 1786940419.3796995
   },
   {
-    "id": 130,
+    "id": 156,
     "unit": "Learning English 2",
     "expression": "Let's face it",
     "meaning": "제대로 생각해. 현실을 받아들여",
@@ -1170,7 +1404,7 @@ window.expressionsData = [
     "last_modified": 1786940419.3796995
   },
   {
-    "id": 131,
+    "id": 157,
     "unit": "Learning English 2",
     "expression": "Just act normal",
     "meaning": "평소처럼 행동해.",
@@ -1179,7 +1413,7 @@ window.expressionsData = [
     "last_modified": 1786940419.3796995
   },
   {
-    "id": 132,
+    "id": 158,
     "unit": "Learning English 2",
     "expression": "Don't be silly",
     "meaning": "너 답지 않아. 왜그래~",
@@ -1188,7 +1422,7 @@ window.expressionsData = [
     "last_modified": 1786940419.3796995
   },
   {
-    "id": 133,
+    "id": 159,
     "unit": "Learning English 2",
     "expression": "Watch your step",
     "meaning": "발 밑 조심해",
@@ -1197,7 +1431,7 @@ window.expressionsData = [
     "last_modified": 1786940419.3796995
   },
   {
-    "id": 134,
+    "id": 160,
     "unit": "Learning English 2",
     "expression": "What's the point?",
     "meaning": "그게 다 무슨 소용이 있지(시간 낭비)내가 뭐 하러 이걸 또 하고 있어?",
@@ -1206,7 +1440,7 @@ window.expressionsData = [
     "last_modified": 1786940419.3796995
   },
   {
-    "id": 135,
+    "id": 161,
     "unit": "Learning English 2",
     "expression": "I can't help it",
     "meaning": "어쩔 수 없어. 내 맘대로 안돼ㅠ",
@@ -1215,7 +1449,7 @@ window.expressionsData = [
     "last_modified": 1786940419.3796995
   },
   {
-    "id": 136,
+    "id": 162,
     "unit": "Learning English 2",
     "expression": "Glad you like it",
     "meaning": "맘에 드니 다행이야",
@@ -1224,247 +1458,13 @@ window.expressionsData = [
     "last_modified": 1786940419.3796995
   },
   {
-    "id": 137,
+    "id": 163,
     "unit": "Learning English 2",
     "expression": "You're a natural",
     "meaning": "타고났구나",
     "example": "- Is it first time you dancing? You're a natural. - Don't you know how that sounds to them? You're natural in flirting. You're such natural-born charmer.",
     "has_example": true,
     "last_modified": 1786940419.3796995
-  },
-  {
-    "id": 138,
-    "unit": "Learning English 21 A",
-    "expression": "As long as ~",
-    "meaning": "~하는 한",
-    "example": "I don't care who you are, where you're from, what you did, as long as you love me<b",
-    "has_example": true,
-    "last_modified": 1786785891.73811
-  },
-  {
-    "id": 139,
-    "unit": "Learning English 21 A",
-    "expression": "It's a bit obvious",
-    "meaning": "이건 좀 뻔하네너무 티난다              It's a bit obvious that you want to go home. The movie was okay, but the ending was a bit obvious. us",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786785891.73811
-  },
-  {
-    "id": 140,
-    "unit": "Learning English 21 A",
-    "expression": "Are you for real?",
-    "meaning": "진짜로 말하는거야?",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786785891.73811
-  },
-  {
-    "id": 141,
-    "unit": "Learning English 21 A",
-    "expression": "Fifty-Fifty chance",
-    "meaning": "반반이야",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786785891.73811
-  },
-  {
-    "id": 142,
-    "unit": "Learning English 21 A",
-    "expression": "I owe you one",
-    "meaning": "너한테 신세진게 있어",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786785891.73811
-  },
-  {
-    "id": 143,
-    "unit": "Learning English 21 A",
-    "expression": "Return the favor",
-    "meaning": "보답하다",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786785891.73811
-  },
-  {
-    "id": 144,
-    "unit": "Learning English 21 A",
-    "expression": "Stop showing off",
-    "meaning": "자랑 그만해",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786785891.73811
-  },
-  {
-    "id": 145,
-    "unit": "Learning English 21 A",
-    "expression": "I didn't know what to do",
-    "meaning": "당황했어*embarrassed :",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786785891.73811
-  },
-  {
-    "id": 146,
-    "unit": "Learning English 21 A",
-    "expression": "I hung out with my friend",
-    "meaning": "친구랑 놀았어",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786785891.73811
-  },
-  {
-    "id": 147,
-    "unit": "Learning English 21 A",
-    "expression": "This is Bizarre",
-    "meaning": "그거 이상하다",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786785891.73811
-  },
-  {
-    "id": 148,
-    "unit": "Learning English 21 A",
-    "expression": "You look better than your photo",
-    "meaning": "실물이 나아요",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786785891.73811
-  },
-  {
-    "id": 149,
-    "unit": "Learning English 21 A",
-    "expression": "You drive me crazy",
-    "meaning": "너때문에 미치겠어",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786785891.73811
-  },
-  {
-    "id": 150,
-    "unit": "Learning English 20 A",
-    "expression": "Keep me posted",
-    "meaning": "계속 상황 알려줘",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786766640.923643
-  },
-  {
-    "id": 151,
-    "unit": "Learning English 20 A",
-    "expression": "Full of joy",
-    "meaning": "기쁨으로 가득한",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786766640.923643
-  },
-  {
-    "id": 152,
-    "unit": "Learning English 20 A",
-    "expression": "showing off",
-    "meaning": "잘난척, 자랑질",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786766640.923643
-  },
-  {
-    "id": 153,
-    "unit": "Learning English 20 A",
-    "expression": "Signal has been jammed",
-    "meaning": "신호가 안가네",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786766640.923643
-  },
-  {
-    "id": 154,
-    "unit": "Learning English 20 A",
-    "expression": "Bad reception",
-    "meaning": "통화가 안들려",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786766640.923643
-  },
-  {
-    "id": 155,
-    "unit": "Learning English 20 A",
-    "expression": "Apparently",
-    "meaning": "보아하니, 듣자하니",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786766640.923643
-  },
-  {
-    "id": 156,
-    "unit": "Learning English 20 A",
-    "expression": "Passed out",
-    "meaning": "기절하다",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786766640.923643
-  },
-  {
-    "id": 157,
-    "unit": "Learning English 20 A",
-    "expression": "Tasteful",
-    "meaning": "우아한, 고상한, 품위있는(사람한테 쓰지 않음)",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786766640.923643
-  },
-  {
-    "id": 158,
-    "unit": "Learning English 20 A",
-    "expression": "Common sense",
-    "meaning": "기본 상식",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786766640.923643
-  },
-  {
-    "id": 159,
-    "unit": "Learning English 20 A",
-    "expression": "Right on time",
-    "meaning": "제 시간에",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786766640.923643
-  },
-  {
-    "id": 160,
-    "unit": "Learning English 20 A",
-    "expression": "Never mind",
-    "meaning": "신경쓰지마",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786766640.923643
-  },
-  {
-    "id": 161,
-    "unit": "Learning English 20 A",
-    "expression": "That sounds really dull",
-    "meaning": "지루하게 들리네(~수준안맞아서)",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786766640.923643
-  },
-  {
-    "id": 162,
-    "unit": "Learning English 20 A",
-    "expression": "The movie is about to start",
-    "meaning": "영화 시작해",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786766640.923643
-  },
-  {
-    "id": 163,
-    "unit": "Learning English 20 A",
-    "expression": "Let's get in",
-    "meaning": "들어가자",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1786766640.923643
   },
   {
     "id": 164,

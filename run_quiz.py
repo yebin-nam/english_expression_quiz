@@ -5,6 +5,15 @@ import re
 import webbrowser
 import subprocess
 
+
+def normalize_expression(text: str) -> str:
+    """Normalize typography and unambiguous OCR pronoun forms, not every l."""
+    text = text.translate(str.maketrans({c: "'" for c in "‘’ʼ＇`´"}))
+    text = re.sub(r"(?<![A-Za-z])[liI](?='(?:m|d|ll|ve)\b)", "I", text)
+    text = re.sub(r"(?<![A-Za-z])[li](?=\s|[.!?,;:]|$)", "I", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
 # 📍 옵시디언 영어공부 폴더 경로
 OBSIDIAN_DIR = r"C:\Users\skadp\OneDrive\문서\Obsidian Vault\영어공부\Learning English"
 OUTPUT_JS = "./learning_data.js"
@@ -51,11 +60,11 @@ def update_learning_data():
                     mean = parts[1]
                     ex = parts[2] if len(parts) >= 3 else ""
                     
-                    expr_clean = re.sub(r"==|\*\*|<br>|~~", "", expr).strip()
+                    expr_clean = normalize_expression(re.sub(r"==|\*\*|<br>|~~", "", expr))
                     mean_clean = re.sub(r"==|\*\*|<br>|~~", "", mean).strip()
                     ex_clean = re.sub(r"==|\*\*|<br>|~~", " ", ex).strip()
                     
-                    if expr_clean:
+                    if expr_clean and mean_clean and not re.search(r"@|\baelee\b|\baelly877\b", expr_clean, re.I):
                         has_ex = bool(ex_clean)
                         all_data.append({
                             "id": item_id,
@@ -75,7 +84,7 @@ def update_learning_data():
     print(f"✅ 최신화 완료! 총 {len(all_data)}개 표현이 '{OUTPUT_JS}'에 저장되었습니다.")
 
 def create_retro_html():
-    html_code = """<!DOCTYPE html>
+    html_code = r"""<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
@@ -207,6 +216,29 @@ def create_retro_html():
       width: 100%; padding: 14px; background: #059669; border: 2px solid #10b981; color: white;
       border-radius: 8px; font-family: inherit; font-size: 16px; cursor: pointer; display: none;
     }
+    /* Compact default view; settings expand only when needed. */
+    body { padding: 12px; align-items: flex-start; }
+    .arcade-card { max-width: 640px; padding: 16px; margin: auto; }
+    .top-header { margin-bottom: 10px; padding: 8px 12px; }
+    .quiz-settings { margin-bottom: 8px; background: #0f172a; border-radius: 8px; }
+    .quiz-settings summary { cursor: pointer; padding: 10px; font-size: 13px; }
+    #settings-summary { color: #94a3b8; font-size: 12px; }
+    .settings-content { padding: 8px 10px 2px; }
+    .keyboard-help { margin: 8px 0 10px; color: #94a3b8; font-size: 12px; }
+    .question-card { padding: 14px; margin-bottom: 10px; min-height: 70px;
+      font-size: 17px; line-height: 1.4; word-break: keep-all; overflow-wrap: anywhere; }
+    .input-group, .mc-grid, .result-box, .hint-btn, .hint-box { margin-bottom: 8px; }
+    .quiz-input { min-width: 0; width: 100%; }
+    .quiz-input, .action-btn, .mc-btn, .next-btn { padding: 10px; }
+    .result-box { overflow-wrap: anywhere; }
+    .session-bar { flex-wrap: wrap; }
+    button:focus-visible, summary:focus-visible { outline: 2px solid #fbbf24; outline-offset: 3px; }
+    @media (max-height: 700px) {
+      body { padding: 6px; }
+      .arcade-card { padding: 10px; }
+      .question-card { padding: 10px; font-size: 16px; }
+      .top-header, .progress-bg, .unit-tag { margin-bottom: 6px; }
+    }
   </style>
   <script src="learning_data.js"></script>
 </head>
@@ -220,6 +252,9 @@ def create_retro_html():
     <div class="lives" id="lives-display">❤️❤️❤️</div>
   </div>
 
+  <details class="quiz-settings" id="quiz-settings">
+    <summary>⚙️ 학습 설정 · 노트 선택 <span id="settings-summary"></span></summary>
+    <div class="settings-content">
   <!-- 모드 선택 -->
   <div class="mode-bar">
     <button class="mode-btn active" id="mode-normal" onclick="setMode('normal')">⚡ 스마트 출제</button>
@@ -254,6 +289,10 @@ def create_retro_html():
     <div class="file-list" id="file-list-container"></div>
   </div>
 
+    </div>
+  </details>
+  <p class="keyboard-help">Enter: 제출 → 다음 문제 · 객관식: 숫자 1–4</p>
+
   <!-- 진행률 바 -->
   <div class="progress-bg"><div class="progress-fill" id="progress-bar"></div></div>
 
@@ -267,7 +306,7 @@ def create_retro_html():
 
   <!-- 입력창 (주관식/빈칸) -->
   <div class="input-group" id="input-group">
-    <input type="text" class="quiz-input" id="user-input" placeholder="정답 입력..." onkeyup="if(event.key==='Enter') submitAnswer()">
+    <input type="text" class="quiz-input" id="user-input" placeholder="정답 입력..." autocomplete="off">
     <button class="action-btn" id="submit-btn" onclick="submitAnswer()">제출</button>
   </div>
 
@@ -275,8 +314,8 @@ def create_retro_html():
   <div class="mc-grid" id="mc-container" style="display:none;"></div>
 
   <!-- 결과 상자 & 다음 버튼 -->
-  <div class="result-box" id="result-box"></div>
-  <button class="next-btn" id="next-btn" onclick="nextQuestion()">다음 문제 도전 ➔</button>
+  <div class="result-box" id="result-box" role="status" aria-live="polite"></div>
+  <button class="next-btn" id="next-btn" onclick="nextQuestion()">다음 문제 · Enter ➔</button>
 </div>
 
 <script>
@@ -288,11 +327,38 @@ def create_retro_html():
   let score = 0;
   let lives = 3;
   let sessionIndex = 0;
+  let sessionQuestions = [];
+  let answered = false;
 
   let wrongList = JSON.parse(localStorage.getItem('quiz_wrong_list') || '[]');
   let selectedUnits = new Set();
 
+  function questionKey(item) {
+    // Content stays stable when source files reorder and numeric IDs change.
+    return JSON.stringify([
+      normalizeAnswer(repairExpression(item.expression)),
+      String(item.meaning || '').normalize('NFKC').trim().replace(/\s+/g, ' ')
+    ]);
+  }
+
+  function uniqueQuestions(items) {
+    return [...new Map(items.map(item => [questionKey(item), item])).values()];
+  }
+
+  function reconcileWrongList(saved, latest) {
+    return uniqueQuestions(saved.map(old => {
+      const expression = normalizeAnswer(repairExpression(old.expression));
+      const matches = latest.filter(item =>
+        normalizeAnswer(repairExpression(item.expression)) === expression);
+      // Prefer the original lesson and meaning; allow a corrected meaning.
+      return matches.find(item => item.unit === old.unit && questionKey(item) === questionKey(old))
+        || matches.find(item => item.unit === old.unit)
+        || matches.find(item => questionKey(item) === questionKey(old));
+    }).filter(Boolean));
+  }
+
   function saveWrongList() {
+    wrongList = uniqueQuestions(wrongList);
     localStorage.setItem('quiz_wrong_list', JSON.stringify(wrongList));
     document.getElementById('wrong-badge').innerText = wrongList.length;
   }
@@ -334,15 +400,13 @@ def create_retro_html():
       cb.checked = status;
       if (status) selectedUnits.add(cb.value);
     });
-    sessionIndex = 0;
-    loadNextQuestion();
+    startSession();
   }
 
   function onUnitToggle(cb) {
     if (cb.checked) selectedUnits.add(cb.value);
     else selectedUnits.delete(cb.value);
-    sessionIndex = 0;
-    loadNextQuestion();
+    startSession();
   }
 
   function setMode(mode) {
@@ -355,8 +419,7 @@ def create_retro_html():
       setMode('normal');
       return;
     }
-    sessionIndex = 0;
-    loadNextQuestion();
+    startSession();
   }
 
   function setQuizType(type) {
@@ -364,7 +427,7 @@ def create_retro_html():
     document.getElementById('type-fill').classList.toggle('active', type === 'fill');
     document.getElementById('type-subjective').classList.toggle('active', type === 'subjective');
     document.getElementById('type-choice').classList.toggle('active', type === 'choice');
-    loadNextQuestion();
+    startSession();
   }
 
   function setLimit(num) {
@@ -372,44 +435,64 @@ def create_retro_html():
     document.querySelectorAll('.session-bar .count-btn').forEach(btn => {
       btn.classList.toggle('active', btn.innerText.includes(num === 999 ? 'MAX' : num));
     });
-    sessionIndex = 0;
-    loadNextQuestion();
+    startSession();
   }
 
   function getFilteredPool() {
     let pool = (window.expressionsData || []).filter(item => selectedUnits.has(item.unit));
     if (currentMode === 'wrong') {
-      pool = wrongList;
+      const wrongKeys = new Set(wrongList.map(questionKey));
+      pool = pool.filter(item => wrongKeys.has(questionKey(item)));
     }
     return pool;
   }
 
+  function startSession() {
+    // Snapshot and shuffle once; never draw a question twice in this session.
+    const unique = new Map();
+    getFilteredPool().forEach(item => {
+      const key = questionKey(item);
+      if (!unique.has(key)) unique.set(key, item);
+    });
+    sessionQuestions = [...unique.values()];
+    for (let i = sessionQuestions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [sessionQuestions[i], sessionQuestions[j]] = [sessionQuestions[j], sessionQuestions[i]];
+    }
+    if (sessionLimit !== 999) sessionQuestions = sessionQuestions.slice(0, sessionLimit);
+    const typeLabel = {fill: '빈칸', subjective: '주관식', choice: '객관식'}[quizType];
+    document.getElementById('settings-summary').textContent =
+      `· ${selectedUnits.size}개 노트 / ${typeLabel} / ${sessionQuestions.length}문제`;
+    sessionIndex = 0;
+    score = 0;
+    lives = 3;
+    document.getElementById('score-val').innerText = score;
+    document.getElementById('lives-display').innerText = '❤️❤️❤️';
+    document.getElementById('stage-num').innerText = '0';
+    document.getElementById('progress-bar').style.width = '0%';
+    loadNextQuestion();
+  }
+
   function loadNextQuestion() {
     const pool = getFilteredPool();
+    currentQuestion = null;
+    answered = false;
     document.getElementById('next-btn').style.display = 'none';
     document.getElementById('result-box').style.display = 'none';
     document.getElementById('hint-box').style.display = 'none';
     document.getElementById('hint-btn').style.display = 'none';
 
-    if (pool.length === 0) {
-      document.getElementById('question-text').innerHTML = "선택된 파일에 학습 데이터가 없습니다. 노트를 체크해 주세요!";
-      return;
-    }
-
-    if (sessionIndex >= sessionLimit) {
-      document.getElementById('question-text').innerHTML = `🎉 세션 완료!<br><br>총 ${sessionLimit}문제를 모두 풀었습니다.<br>최종 SCORE: ${score}`;
+    if (sessionIndex >= sessionQuestions.length) {
+      document.getElementById('question-text').innerHTML = sessionQuestions.length
+        ? `🎉 세션 완료!<br><br>총 ${sessionQuestions.length}문제를 모두 풀었습니다.<br>최종 SCORE: ${score}`
+        : "선택된 파일에 학습 데이터가 없습니다. 노트를 체크해 주세요!";
       document.getElementById('input-group').style.display = 'none';
       document.getElementById('mc-container').style.display = 'none';
       return;
     }
 
-    const randIdx = Math.floor(Math.random() * pool.length);
-    currentQuestion = pool[randIdx];
-    sessionIndex++;
-
-    document.getElementById('stage-num').innerText = sessionIndex;
-    const progressPct = Math.min(100, Math.round((sessionIndex / Math.min(sessionLimit, pool.length)) * 100));
-    document.getElementById('progress-bar').style.width = progressPct + '%';
+    currentQuestion = sessionQuestions[sessionIndex++];
+    document.getElementById('stage-num').innerText = `${sessionIndex} / ${sessionQuestions.length}`;
 
     document.getElementById('unit-tag').innerText = currentQuestion.unit;
 
@@ -495,20 +578,36 @@ def create_retro_html():
     evaluateAnswer(val);
   }
 
+  function normalizeAnswer(value) {
+    return String(value).normalize('NFKC')
+      .replace(/[‘’ʼ＇`´]/g, "'")
+      .trim().replace(/[.。]+$/u, '').trim().replace(/\s+/g, ' ').toLowerCase();
+  }
+
+  function repairExpression(value) {
+    return String(value).replace(/[‘’ʼ＇`´]/g, "'")
+      .replace(/\b[liI](?='(?:m|d|ll|ve)\b)/g, 'I')
+      .replace(/\b[li](?=\s|[.!?,;:]|$)/g, 'I');
+  }
+
   function evaluateAnswer(userVal) {
+    if (!currentQuestion || answered) return;
+    answered = true;
+    document.getElementById('quiz-settings').open = false;
+    document.getElementById('progress-bar').style.width = `${Math.round(sessionIndex / sessionQuestions.length * 100)}%`;
     const resultBox = document.getElementById('result-box');
-    const uVal = userVal.toLowerCase();
+    const uVal = normalizeAnswer(userVal);
     
     let isCorrect = false;
     let targetAnswer = currentQuestion.expression;
 
     if (quizType === 'fill' && currentQuestion._targetWord) {
-      const targetW = currentQuestion._targetWord.toLowerCase();
-      if (uVal === targetW || uVal === currentQuestion.expression.toLowerCase()) {
+      const targetW = normalizeAnswer(currentQuestion._targetWord);
+      if (uVal === targetW || uVal === normalizeAnswer(currentQuestion.expression)) {
         isCorrect = true;
       }
     } else {
-      if (uVal === targetAnswer.toLowerCase()) {
+      if (uVal === normalizeAnswer(targetAnswer)) {
         isCorrect = true;
       }
     }
@@ -520,7 +619,7 @@ def create_retro_html():
 
       // ⭐️ 오답노트 모드에서 맞히면 오답노트에서 해당 문제 자동 삭제!
       if (currentMode === 'wrong') {
-        wrongList = wrongList.filter(item => item.id !== currentQuestion.id);
+        wrongList = wrongList.filter(item => questionKey(item) !== questionKey(currentQuestion));
         saveWrongList();
         resultBox.innerHTML = `🎉 정답입니다! (오답노트에서 삭제됨)<br>정답: <strong>${currentQuestion.expression}</strong>`;
       } else {
@@ -535,7 +634,7 @@ def create_retro_html():
       resultBox.innerHTML = `❌ 아쉽네요!<br>입력답: ${userVal}<br>정답: <strong>${currentQuestion.expression}</strong>`;
       
       // 오답노트에 추가
-      if (!wrongList.some(item => item.id === currentQuestion.id)) {
+      if (!wrongList.some(item => questionKey(item) === questionKey(currentQuestion))) {
         wrongList.push(currentQuestion);
         saveWrongList();
       }
@@ -551,21 +650,49 @@ def create_retro_html():
     }
 
     document.getElementById('next-btn').style.display = 'block';
+    document.getElementById('next-btn').focus({preventScroll: true});
   }
 
   function nextQuestion() {
-    // ⭐️ 오답노트 모드에서 오답을 다 지웠는지 확인
-    if (currentMode === 'wrong' && wrongList.length === 0) {
-      alert("🎉 축하합니다! 오답노트의 모든 문제를 정답으로 맞혀 오답노트가 비었습니다!");
-      setMode('normal');
-      return;
-    }
+    if (!currentQuestion || !answered) return;
     loadNextQuestion();
   }
 
+  function handleQuizKey(event) {
+    // Ignore held keys and IME confirmation (e.g. Korean composition).
+    if (event.repeat || event.isComposing || event.keyCode === 229 ||
+        event.ctrlKey || event.altKey || event.metaKey || event.shiftKey) return;
+    const target = event.target;
+    if (target && target.closest && target.closest('#quiz-settings')) return;
+    if (!currentQuestion) return;
+    if (event.key === 'Enter') {
+      if (answered) {
+        event.preventDefault();
+        nextQuestion();
+      } else if (quizType !== 'choice' &&
+                 (!target || target.id === 'user-input' || target.id === 'submit-btn' ||
+                  target === document.body)) {
+        event.preventDefault();
+        submitAnswer();
+      }
+    } else if (quizType === 'choice' && !answered && /^[1-4]$/.test(event.key)) {
+      const button = document.querySelectorAll('.mc-btn')[Number(event.key) - 1];
+      if (button && !button.disabled) {
+        event.preventDefault();
+        button.click();
+      }
+    }
+  }
+  document.addEventListener('keydown', handleQuizKey);
+
+  // Reconcile saved mistakes with regenerated source data; IDs can change.
+  const latestData = window.expressionsData || [];
+  latestData.forEach(item => { item.expression = repairExpression(item.expression); });
+  wrongList = reconcileWrongList(wrongList, latestData);
+
   // 초기화
   initFiles();
-  loadNextQuestion();
+  startSession();
 </script>
 
 </body>

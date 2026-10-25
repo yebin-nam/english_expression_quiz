@@ -6,6 +6,15 @@ import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
+
+def normalize_expression(text: str) -> str:
+    """Normalize typography and unambiguous OCR pronoun forms, not every l."""
+    text = text.translate(str.maketrans({c: "'" for c in "‘’ʼ＇`´"}))
+    text = re.sub(r"(?<![A-Za-z])[liI](?='(?:m|d|ll|ve)\b)", "I", text)
+    text = re.sub(r"(?<![A-Za-z])[li](?=\s|[.!?,;:]|$)", "I", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
 # 📍 옵시디언 영어공부 폴더 경로
 WATCH_DIR = r"C:\Users\skadp\OneDrive\문서\Obsidian Vault\영어공부\Learning English"
 OUTPUT_JSON = "./learning_data.json"
@@ -37,11 +46,11 @@ def parse_markdown_files():
                     mean = parts[1]
                     ex = parts[2] if len(parts) >= 3 else ""
                     
-                    expr_clean = re.sub(r"==|\*\*|<br>|~~", "", expr).strip()
+                    expr_clean = normalize_expression(re.sub(r"==|\*\*|<br>|~~", "", expr))
                     mean_clean = re.sub(r"==|\*\*|<br>|~~", "", mean).strip()
                     ex_clean = re.sub(r"==|\*\*|<br>|~~", " ", ex).strip()
                     
-                    if expr_clean:
+                    if expr_clean and mean_clean and not re.search(r"@|\baelee\b|\baelly877\b", expr_clean, re.I):
                         has_ex = bool(ex_clean)
                         all_data.append({
                             "id": item_id,

@@ -20,6 +20,14 @@ OUTPUT_JS = "./learning_data.js"
 QUIZ_HTML = "./index.html"
 QUIZ_HTML_ALT = "./quiz.html"
 
+def lesson_sort_key(path):
+    name = os.path.splitext(os.path.basename(path))[0].replace("_", " ")
+    match = re.search(r"\d+", name)
+    if match:
+        return (0, -int(match.group()), name[match.end():].strip().casefold(), name.casefold())
+    return (1, 0, "", name.casefold())
+
+
 def update_learning_data():
     all_data = []
     item_id = 1
@@ -31,17 +39,12 @@ def update_learning_data():
 
     md_files = glob.glob(os.path.join(search_dir, "*.md"))
     
-    # 2. 최신 수정일순(업데이트순) 정렬
-    file_with_time = []
-    for fpath in md_files:
-        mtime = os.path.getmtime(fpath)
-        file_with_time.append((fpath, mtime))
-    
-    file_with_time.sort(key=lambda x: x[1], reverse=True)
-    
-    print(f"🔄 총 {len(file_with_time)}개의 마크다운 파일을 파싱하는 중 (최신순)...")
+    # Lesson number descending; files with the same number use A, B, C order.
+    md_files.sort(key=lesson_sort_key)
+    print(f"🔄 총 {len(md_files)}개의 마크다운 파일을 파싱하는 중 (번호 큰 순)...")
 
-    for file_path, mtime in file_with_time:
+    for file_path in md_files:
+        mtime = os.path.getmtime(file_path)
         unit_name = os.path.basename(file_path).replace(".md", "").replace("_", " ")
         
         try:
@@ -280,7 +283,7 @@ def create_retro_html():
   <!-- 파일 선택 -->
   <div class="file-select-box">
     <div style="display:flex; justify-content:space-between; align-items:center;">
-      <strong>📁 출제 노트 선택 (최신순):</strong>
+      <strong>📁 출제 노트 선택 (번호 큰 순):</strong>
       <div>
         <button onclick="toggleAllFiles(true)" style="font-size:10px; background:#334155; color:#fff; border:none; border-radius:3px; padding:2px 6px; cursor:pointer;">전체선택</button>
         <button onclick="toggleAllFiles(false)" style="font-size:10px; background:#334155; color:#fff; border:none; border-radius:3px; padding:2px 6px; cursor:pointer;">해제</button>
@@ -363,6 +366,21 @@ def create_retro_html():
     document.getElementById('wrong-badge').innerText = wrongList.length;
   }
 
+  function compareUnits(a, b) {
+    const ma = a.match(/\d+/), mb = b.match(/\d+/);
+    if (ma && mb) {
+      const byNumber = Number(mb[0]) - Number(ma[0]);
+      if (byNumber) return byNumber;
+      const suffixA = a.slice(ma.index + ma[0].length).trim();
+      const suffixB = b.slice(mb.index + mb[0].length).trim();
+      return suffixA.localeCompare(suffixB, 'en', {sensitivity: 'base'}) ||
+        a.localeCompare(b, 'en', {sensitivity: 'base'});
+    }
+    if (ma) return -1;
+    if (mb) return 1;
+    return a.localeCompare(b, 'en', {sensitivity: 'base'});
+  }
+
   function initFiles() {
     const rawData = window.expressionsData || [];
     const container = document.getElementById('file-list-container');
@@ -375,18 +393,12 @@ def create_retro_html():
       }
     });
 
-    unitMap.forEach((mtime, unit) => {
+    [...unitMap.keys()].sort(compareUnits).forEach(unit => {
       selectedUnits.add(unit);
       const div = document.createElement('div');
       div.className = 'file-item';
       
-      let dateStr = '';
-      if (mtime) {
-        const d = new Date(mtime * 1000);
-        dateStr = ` <span style="font-size:10px; color:#64748b;">(${d.getMonth()+1}/${d.getDate()} ${d.getHours()}:${String(d.getMinutes()).padStart(2,'0')})</span>`;
-      }
-
-      div.innerHTML = `<input type="checkbox" checked value="${unit}" onchange="onUnitToggle(this)"> <span>${unit}${dateStr}</span>`;
+      div.innerHTML = `<input type="checkbox" checked value="${unit}" onchange="onUnitToggle(this)"> <span>${unit}</span>`;
       container.appendChild(div);
     });
 

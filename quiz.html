@@ -194,7 +194,7 @@
   <!-- 파일 선택 -->
   <div class="file-select-box">
     <div style="display:flex; justify-content:space-between; align-items:center;">
-      <strong>📁 출제 노트 선택 (최신순):</strong>
+      <strong>📁 출제 노트 선택 (번호 큰 순):</strong>
       <div>
         <button onclick="toggleAllFiles(true)" style="font-size:10px; background:#334155; color:#fff; border:none; border-radius:3px; padding:2px 6px; cursor:pointer;">전체선택</button>
         <button onclick="toggleAllFiles(false)" style="font-size:10px; background:#334155; color:#fff; border:none; border-radius:3px; padding:2px 6px; cursor:pointer;">해제</button>
@@ -277,6 +277,21 @@
     document.getElementById('wrong-badge').innerText = wrongList.length;
   }
 
+  function compareUnits(a, b) {
+    const ma = a.match(/\d+/), mb = b.match(/\d+/);
+    if (ma && mb) {
+      const byNumber = Number(mb[0]) - Number(ma[0]);
+      if (byNumber) return byNumber;
+      const suffixA = a.slice(ma.index + ma[0].length).trim();
+      const suffixB = b.slice(mb.index + mb[0].length).trim();
+      return suffixA.localeCompare(suffixB, 'en', {sensitivity: 'base'}) ||
+        a.localeCompare(b, 'en', {sensitivity: 'base'});
+    }
+    if (ma) return -1;
+    if (mb) return 1;
+    return a.localeCompare(b, 'en', {sensitivity: 'base'});
+  }
+
   function initFiles() {
     const rawData = window.expressionsData || [];
     const container = document.getElementById('file-list-container');
@@ -289,18 +304,12 @@
       }
     });
 
-    unitMap.forEach((mtime, unit) => {
+    [...unitMap.keys()].sort(compareUnits).forEach(unit => {
       selectedUnits.add(unit);
       const div = document.createElement('div');
       div.className = 'file-item';
       
-      let dateStr = '';
-      if (mtime) {
-        const d = new Date(mtime * 1000);
-        dateStr = ` <span style="font-size:10px; color:#64748b;">(${d.getMonth()+1}/${d.getDate()} ${d.getHours()}:${String(d.getMinutes()).padStart(2,'0')})</span>`;
-      }
-
-      div.innerHTML = `<input type="checkbox" checked value="${unit}" onchange="onUnitToggle(this)"> <span>${unit}${dateStr}</span>`;
+      div.innerHTML = `<input type="checkbox" checked value="${unit}" onchange="onUnitToggle(this)"> <span>${unit}</span>`;
       container.appendChild(div);
     });
 

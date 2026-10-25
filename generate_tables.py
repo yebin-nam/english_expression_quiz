@@ -9,14 +9,19 @@
     | --- | --- | --- |
     | ... | ... | |
 
-기본 실행은 기존 md를 보존합니다. --force는 기존 파일을 .md.bak로 백업한 뒤 재생성합니다.
+기본 실행은 기존 md의 뜻 칸 띄어쓰기를 자동 교정한 뒤 새 이미지의 표를 생성합니다.
+기존 Expression/Example은 보존하며, 변경된 노트만 .md.bak으로 백업합니다.
+--force는 기존 파일을 백업한 뒤 표 전체를 재생성하는 선택 기능입니다.
 주의: --force로 재생성한 표의 Example은 비워집니다. 직접 쓴 내용은 백업에서 옮겨주세요.
 첨부 양식 기준 상단 13%, 하단 10%는 제목/서명으로 제외합니다.
 OCR은 완벽하지 않으니, 생성된 md 파일은 한 번 훑어보고 오탈자를 고쳐주세요.
 
 사용법:
-    python generate_tables.py             실제로 md 파일 생성
+    python generate_tables.py             기존 뜻 띄어쓰기 교정 + 새 이미지 표 생성
     python generate_tables.py --dry-run   무엇을 만들지만 미리 확인 (파일 생성 없음)
+    python generate_tables.py --fix-spacing   기존 md의 뜻만 띄어쓰기 교정 (Example 보존)
+
+추가 설치: python -m pip install kiwipiepy
 """
 from __future__ import annotations
 
@@ -53,6 +58,75 @@ NAMED_RE = re.compile(r"^Learning English \d+( [A-Za-z])?$", re.IGNORECASE)
 TITLE_RE = re.compile(r"learn|engl|aelee", re.IGNORECASE)
 HANGUL_RE = re.compile(r"[\uac00-\ud7a3]")
 JUNK_PREFIX_RE = re.compile(r"^[^\w가-힣]+")
+
+
+_SPACER = None
+
+
+def normalize_meaning(text: str) -> str:
+    """Repair Korean spacing only; never change non-whitespace characters."""
+    global _SPACER
+    if not HANGUL_RE.search(text):
+        return text
+    if _SPACER is None:
+        try:
+            from kiwipiepy import Kiwi
+        except ImportError as exc:
+            raise RuntimeError(
+                "한글 띄어쓰기 보정에 kiwipiepy가 필요합니다. "
+                "먼저 python -m pip install kiwipiepy 를 실행해주세요."
+            ) from exc
+        _SPACER = Kiwi(num_workers=1)
+    corrected = _SPACER.space(text, reset_whitespace=True)
+    if re.sub(r"\s", "", corrected) != re.sub(r"\s", "", text):
+        raise ValueError(f"띄어쓰기 외 글자 변경이 감지되어 중단합니다: {text!r}")
+    return corrected
+
+
+def backup_note(path: Path) -> Path:
+    import shutil
+    backup = path.with_suffix(".md.bak")
+    index = 1
+    while backup.exists():
+        backup = path.with_suffix(f".md.bak.{index}")
+        index += 1
+    shutil.copy2(path, backup)
+    return backup
+
+
+def fix_table_spacing(content: str) -> str:
+    lines = []
+    for line in content.splitlines(keepends=True):
+        parts = re.split(r"(?<!\\)\|", line)
+        if line.lstrip().startswith("|") and len(parts) >= 4:
+            cell = parts[2]
+            meaning = cell.strip()
+            if HANGUL_RE.search(meaning):
+                corrected = normalize_meaning(meaning)
+                if corrected != meaning:
+                    start = len(cell) - len(cell.lstrip())
+                    end = len(cell.rstrip())
+                    parts[2] = cell[:start] + corrected + cell[end:]
+                    line = "|".join(parts)
+        lines.append(line)
+    return "".join(lines)
+
+
+def fix_existing_spacing(dry_run: bool) -> None:
+    paths = sorted(MD_DIR.glob("*.md"))
+    changed = 0
+    for path in paths:
+        # Preserve Windows line endings and all other table cells byte-for-byte.
+        original = path.read_bytes().decode("utf-8")
+        corrected = fix_table_spacing(original)
+        if corrected == original:
+            continue
+        changed += 1
+        print(f"[띄어쓰기 교정] {path.name}")
+        if not dry_run:
+            print(f"  백업: {backup_note(path).name}")
+            path.write_bytes(corrected.encode("utf-8"))
+    print(f"{len(paths)}개 노트 검사, {changed}개 {'교정 예정' if dry_run else '교정 완료'}")
 
 
 def ocr_column(image: Image.Image, lang: str) -> list[dict]:
@@ -93,7 +167,7 @@ def pair_rows(left: list[dict], right: list[dict]) -> tuple[list[str], list[str]
         if "@" in meaning:
             continue
         expressions.append(expr)
-        meanings.append(meaning)
+        meanings.append(normalize_meaning(meaning))
     for j, row in enumerate(right):
         if j not in used:
             print(f"  [확인] 대응하는 표현이 없어 제외: {row['text']}")
@@ -129,6 +203,10 @@ def build_table(expressions: list[str], meanings: list[str]) -> str:
 
 def main() -> None:
     dry_run = "--dry-run" in sys.argv
+    # The existing double-click BAT needs no additional arguments.
+    fix_existing_spacing(dry_run)
+    if "--fix-spacing" in sys.argv:
+        return
 
     images = [
         p
@@ -161,15 +239,7 @@ def main() -> None:
         if not dry_run:
             MD_DIR.mkdir(parents=True, exist_ok=True)
             if md_path.exists():
-                # Preserve hand-written examples before explicitly regenerating.
-                import shutil
-                backup = md_path.with_suffix(".md.bak")
-                index = 1
-                while backup.exists():
-                    backup = md_path.with_suffix(f".md.bak.{index}")
-                    index += 1
-                shutil.copy2(md_path, backup)
-                print(f"  기존 노트 백업: {backup.name}")
+                print(f"  기존 노트 백업: {backup_note(md_path).name}")
             md_path.write_text(table, encoding="utf-8")
 
     if dry_run:

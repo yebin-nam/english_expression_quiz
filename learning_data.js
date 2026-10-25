@@ -6,16 +6,16 @@ window.expressionsData = [
     "meaning": "아직 멀었어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792902780.9033177
+    "last_modified": 1792903104.3607414
   },
   {
     "id": 2,
     "unit": "Learning English 30 A",
     "expression": "How come?",
-    "meaning": "Why?",
+    "meaning": "Why?(Why가 조금 공격적인 느낌이 있어서 대체)",
     "example": null,
     "has_example": false,
-    "last_modified": 1792902780.9033177
+    "last_modified": 1792903104.3607414
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@ window.expressionsData = [
     "meaning": "그냥 쉬고 있어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792902780.9033177
+    "last_modified": 1792903104.3607414
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@ window.expressionsData = [
     "meaning": "(전에는 술 문제 있었는데)술끊었어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792902780.9033177
+    "last_modified": 1792903104.3607414
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@ window.expressionsData = [
     "meaning": "가만두지 않겠어, 뒤졌음",
     "example": null,
     "has_example": false,
-    "last_modified": 1792902780.9033177
+    "last_modified": 1792903104.3607414
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@ window.expressionsData = [
     "meaning": "지금 뭐할 거야?",
     "example": null,
     "has_example": false,
-    "last_modified": 1792902780.9033177
+    "last_modified": 1792903104.3607414
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@ window.expressionsData = [
     "meaning": "맥주 좋아해?",
     "example": null,
     "has_example": false,
-    "last_modified": 1792902780.9033177
+    "last_modified": 1792903104.3607414
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@ window.expressionsData = [
     "meaning": "나 오늘 불붙었어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792902780.9033177
+    "last_modified": 1792903104.3607414
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@ window.expressionsData = [
     "meaning": "말 안하는게 좋을 것 같아",
     "example": null,
     "has_example": false,
-    "last_modified": 1792902780.9033177
+    "last_modified": 1792903104.3607414
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@ window.expressionsData = [
     "meaning": "너에게 달렸어, 너가 골라",
     "example": null,
     "has_example": false,
-    "last_modified": 1792902780.9033177
+    "last_modified": 1792903104.3607414
   },
   {
     "id": 11,
@@ -96,16 +96,16 @@ window.expressionsData = [
     "meaning": "길가다가 전애인이랑 마주쳤어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792902780.9033177
+    "last_modified": 1792903104.3607414
   },
   {
     "id": 12,
     "unit": "Learning English 30 A",
-    "expression": "l'll catch up with you",
+    "expression": "I'll catch up with you",
     "meaning": "금방보자",
     "example": null,
     "has_example": false,
-    "last_modified": 1792902780.9033177
+    "last_modified": 1792903104.3607414
   },
   {
     "id": 13,

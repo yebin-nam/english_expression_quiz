@@ -1,6 +1,114 @@
 window.expressionsData = [
   {
     "id": 1,
+    "unit": "Learning English 25 A",
+    "expression": "Sassy girl",
+    "meaning": "새침, 도도",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792907530.5845926
+  },
+  {
+    "id": 2,
+    "unit": "Learning English 25 A",
+    "expression": "Carry on",
+    "meaning": "계속해",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792907530.5845926
+  },
+  {
+    "id": 3,
+    "unit": "Learning English 25 A",
+    "expression": "Every other month",
+    "meaning": "격 달로",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792907530.5845926
+  },
+  {
+    "id": 4,
+    "unit": "Learning English 25 A",
+    "expression": "Fair enough",
+    "meaning": "알았어, 어쩔 수 없지",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792907530.5845926
+  },
+  {
+    "id": 5,
+    "unit": "Learning English 25 A",
+    "expression": "Getting there?",
+    "meaning": "다 됐어?",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792907530.5845926
+  },
+  {
+    "id": 6,
+    "unit": "Learning English 25 A",
+    "expression": "I'm nearly done",
+    "meaning": "거의 다 됐어",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792907530.5845926
+  },
+  {
+    "id": 7,
+    "unit": "Learning English 25 A",
+    "expression": "I will get back to you",
+    "meaning": "다시 연락 줄게",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792907530.5845926
+  },
+  {
+    "id": 8,
+    "unit": "Learning English 25 A",
+    "expression": "ASAP",
+    "meaning": "As Soon As Possible",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792907530.5845926
+  },
+  {
+    "id": 9,
+    "unit": "Learning English 25 A",
+    "expression": "She is taken",
+    "meaning": "임자있는 여자",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792907530.5845926
+  },
+  {
+    "id": 10,
+    "unit": "Learning English 25 A",
+    "expression": "Make it two",
+    "meaning": "똑같은 걸로 두 개",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792907530.5845926
+  },
+  {
+    "id": 11,
+    "unit": "Learning English 25 A",
+    "expression": "Stop Flirting",
+    "meaning": "작업(?) 그만해, 관심",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792907530.5845926
+  },
+  {
+    "id": 12,
+    "unit": "Learning English 25 A",
+    "expression": "Don't be Picky",
+    "meaning": "까다롭게 굴지 마",
+    "example": null,
+    "has_example": false,
+    "last_modified": 1792907530.5845926
+  },
+  {
+    "id": 13,
     "unit": "Learning English 29",
     "expression": "Help me out",
     "meaning": "도와줘 (casual)",
@@ -9,7 +117,7 @@ window.expressionsData = [
     "last_modified": 1792907467.2647927
   },
   {
-    "id": 2,
+    "id": 14,
     "unit": "Learning English 29",
     "expression": "Make an excuse",
     "meaning": "변명하다",
@@ -18,7 +126,7 @@ window.expressionsData = [
     "last_modified": 1792907467.2647927
   },
   {
-    "id": 3,
+    "id": 15,
     "unit": "Learning English 29",
     "expression": "You can't put that on me",
     "meaning": "내 탓을 하면 안 되지",
@@ -27,7 +135,7 @@ window.expressionsData = [
     "last_modified": 1792907467.2647927
   },
   {
-    "id": 4,
+    "id": 16,
     "unit": "Learning English 29",
     "expression": "All you have to do is~",
     "meaning": "~ 하기만하면 돼",
@@ -36,7 +144,7 @@ window.expressionsData = [
     "last_modified": 1792907467.2647927
   },
   {
-    "id": 5,
+    "id": 17,
     "unit": "Learning English 29",
     "expression": "Want to come along?",
     "meaning": "같이 갈래?",
@@ -45,7 +153,7 @@ window.expressionsData = [
     "last_modified": 1792907467.2647927
   },
   {
-    "id": 6,
+    "id": 18,
     "unit": "Learning English 29",
     "expression": "Hit the road",
     "meaning": "떠나자, 여행 가자",
@@ -54,7 +162,7 @@ window.expressionsData = [
     "last_modified": 1792907467.2647927
   },
   {
-    "id": 7,
+    "id": 19,
     "unit": "Learning English 29",
     "expression": "Not at all",
     "meaning": "전혀 그렇지 않아, 물론이지",
@@ -63,7 +171,7 @@ window.expressionsData = [
     "last_modified": 1792907467.2647927
   },
   {
-    "id": 8,
+    "id": 20,
     "unit": "Learning English 29",
     "expression": "For a change",
     "meaning": "기분 전환 삼아",
@@ -72,7 +180,7 @@ window.expressionsData = [
     "last_modified": 1792907467.2647927
   },
   {
-    "id": 9,
+    "id": 21,
     "unit": "Learning English 29",
     "expression": "I'm clumsy",
     "meaning": "내가 좀 덤벙거려",
@@ -81,7 +189,7 @@ window.expressionsData = [
     "last_modified": 1792907467.2647927
   },
   {
-    "id": 10,
+    "id": 22,
     "unit": "Learning English 29",
     "expression": "You take me for granted",
     "meaning": "넌 날 당연하게 여기자나",
@@ -90,7 +198,7 @@ window.expressionsData = [
     "last_modified": 1792907467.2647927
   },
   {
-    "id": 11,
+    "id": 23,
     "unit": "Learning English 29",
     "expression": "Never take for granted the people who show you love and kindness",
     "meaning": "네게 사랑과 친절을 베푸는 사람을 당연하게 생각하지마",
@@ -99,7 +207,7 @@ window.expressionsData = [
     "last_modified": 1792907467.2647927
   },
   {
-    "id": 12,
+    "id": 24,
     "unit": "Learning English 29",
     "expression": "Let us not take this planet for granted",
     "meaning": "이 지구를 당연시 여기지 맙시다",
@@ -108,7 +216,7 @@ window.expressionsData = [
     "last_modified": 1792907467.2647927
   },
   {
-    "id": 13,
+    "id": 25,
     "unit": "Learning English 29",
     "expression": "I do not take tonight for granted",
     "meaning": "오늘 밤을 당연시 여기지 않겠어",
@@ -117,7 +225,7 @@ window.expressionsData = [
     "last_modified": 1792907467.2647927
   },
   {
-    "id": 14,
+    "id": 26,
     "unit": "Learning English 30 A",
     "expression": "Not even close",
     "meaning": "아직 멸었어",
@@ -126,7 +234,7 @@ window.expressionsData = [
     "last_modified": 1792907376.0513053
   },
   {
-    "id": 15,
+    "id": 27,
     "unit": "Learning English 30 A",
     "expression": "How come?",
     "meaning": "Why?",
@@ -135,7 +243,7 @@ window.expressionsData = [
     "last_modified": 1792907376.0513053
   },
   {
-    "id": 16,
+    "id": 28,
     "unit": "Learning English 30 A",
     "expression": "I'm just chilling",
     "meaning": "그냥 쉬고 있어",
@@ -144,7 +252,7 @@ window.expressionsData = [
     "last_modified": 1792907376.0513053
   },
   {
-    "id": 17,
+    "id": 29,
     "unit": "Learning English 30 A",
     "expression": "I'm sober",
     "meaning": "술 끊었어",
@@ -153,7 +261,7 @@ window.expressionsData = [
     "last_modified": 1792907376.0513053
   },
   {
-    "id": 18,
+    "id": 30,
     "unit": "Learning English 30 A",
     "expression": "I will kick your ass",
     "meaning": "가만두지 않겠어, 뒤졌음",
@@ -162,7 +270,7 @@ window.expressionsData = [
     "last_modified": 1792907376.0513053
   },
   {
-    "id": 19,
+    "id": 31,
     "unit": "Learning English 30 A",
     "expression": "What are you up to?",
     "meaning": "지금 뭐 할 거야?",
@@ -171,7 +279,7 @@ window.expressionsData = [
     "last_modified": 1792907376.0513053
   },
   {
-    "id": 20,
+    "id": 32,
     "unit": "Learning English 30 A",
     "expression": "Do you fancy a beer?",
     "meaning": "맥주 좋아해?",
@@ -180,7 +288,7 @@ window.expressionsData = [
     "last_modified": 1792907376.0513053
   },
   {
-    "id": 21,
+    "id": 33,
     "unit": "Learning English 30 A",
     "expression": "I'm on fire",
     "meaning": "나 오늘 불 붙었어",
@@ -189,7 +297,7 @@ window.expressionsData = [
     "last_modified": 1792907376.0513053
   },
   {
-    "id": 22,
+    "id": 34,
     "unit": "Learning English 30 A",
     "expression": "I'd rather not say",
     "meaning": "말 안 하는 게 좋을 것 같아",
@@ -198,7 +306,7 @@ window.expressionsData = [
     "last_modified": 1792907376.0513053
   },
   {
-    "id": 23,
+    "id": 35,
     "unit": "Learning English 30 A",
     "expression": "It's up to you",
     "meaning": "너에게 달렸어, 너가 골라",
@@ -207,7 +315,7 @@ window.expressionsData = [
     "last_modified": 1792907376.0513053
   },
   {
-    "id": 24,
+    "id": 36,
     "unit": "Learning English 30 A",
     "expression": "I bumped into my ex",
     "meaning": "길 가다가 전 애인이랑 마주쳤어",
@@ -216,7 +324,7 @@ window.expressionsData = [
     "last_modified": 1792907376.0513053
   },
   {
-    "id": 25,
+    "id": 37,
     "unit": "Learning English 30 A",
     "expression": "I'll catch up with you",
     "meaning": "금방 보자",
@@ -225,7 +333,7 @@ window.expressionsData = [
     "last_modified": 1792907376.0513053
   },
   {
-    "id": 26,
+    "id": 38,
     "unit": "Learning English 28",
     "expression": "Care for some coffee?",
     "meaning": "커피 마실래?",
@@ -234,7 +342,7 @@ window.expressionsData = [
     "last_modified": 1792907371.0930755
   },
   {
-    "id": 27,
+    "id": 39,
     "unit": "Learning English 28",
     "expression": "Got some connections",
     "meaning": "아는 사람이 있어",
@@ -243,7 +351,7 @@ window.expressionsData = [
     "last_modified": 1792907371.0930755
   },
   {
-    "id": 28,
+    "id": 40,
     "unit": "Learning English 28",
     "expression": "I knew it",
     "meaning": "그럴 줄 알았어",
@@ -252,7 +360,7 @@ window.expressionsData = [
     "last_modified": 1792907371.0930755
   },
   {
-    "id": 29,
+    "id": 41,
     "unit": "Learning English 28",
     "expression": "I'm a big fan of his song",
     "meaning": "그의 노래 완전 팬이야",
@@ -261,7 +369,7 @@ window.expressionsData = [
     "last_modified": 1792907371.0930755
   },
   {
-    "id": 30,
+    "id": 42,
     "unit": "Learning English 28",
     "expression": "Go easy on it",
     "meaning": "적당히 해",
@@ -270,7 +378,7 @@ window.expressionsData = [
     "last_modified": 1792907371.0930755
   },
   {
-    "id": 31,
+    "id": 43,
     "unit": "Learning English 28",
     "expression": "It's not gonna kill you",
     "meaning": "그거 한다고 큰일 안 나",
@@ -279,7 +387,7 @@ window.expressionsData = [
     "last_modified": 1792907371.0930755
   },
   {
-    "id": 32,
+    "id": 44,
     "unit": "Learning English 28",
     "expression": "Look at the bright side",
     "meaning": "긍정적으로 생각해",
@@ -288,7 +396,7 @@ window.expressionsData = [
     "last_modified": 1792907371.0930755
   },
   {
-    "id": 33,
+    "id": 45,
     "unit": "Learning English 28",
     "expression": "Sorry to keep you waiting",
     "meaning": "오래 기다리게해서 미안해",
@@ -297,7 +405,7 @@ window.expressionsData = [
     "last_modified": 1792907371.0930755
   },
   {
-    "id": 34,
+    "id": 46,
     "unit": "Learning English 28",
     "expression": "The most convenient time",
     "meaning": "제일 편한 시간",
@@ -306,7 +414,7 @@ window.expressionsData = [
     "last_modified": 1792907371.0930755
   },
   {
-    "id": 35,
+    "id": 47,
     "unit": "Learning English 28",
     "expression": "Got ya/Got it",
     "meaning": "알았어",
@@ -315,7 +423,7 @@ window.expressionsData = [
     "last_modified": 1792907371.0930755
   },
   {
-    "id": 36,
+    "id": 48,
     "unit": "Learning English 28",
     "expression": "Make no difference",
     "meaning": "차이가 없다",
@@ -324,7 +432,7 @@ window.expressionsData = [
     "last_modified": 1792907371.0930755
   },
   {
-    "id": 37,
+    "id": 49,
     "unit": "Learning English 28",
     "expression": "Can you give me a hand?",
     "meaning": "좀 도와줄래요?",
@@ -333,7 +441,7 @@ window.expressionsData = [
     "last_modified": 1792907371.0930755
   },
   {
-    "id": 38,
+    "id": 50,
     "unit": "Learning English 27",
     "expression": "Don't bother",
     "meaning": "귀찮게 굴지 마",
@@ -342,7 +450,7 @@ window.expressionsData = [
     "last_modified": 1792907369.0612268
   },
   {
-    "id": 39,
+    "id": 51,
     "unit": "Learning English 27",
     "expression": "Be who you are",
     "meaning": "자신감을 가져",
@@ -351,7 +459,7 @@ window.expressionsData = [
     "last_modified": 1792907369.0612268
   },
   {
-    "id": 40,
+    "id": 52,
     "unit": "Learning English 27",
     "expression": "What's the weather like?",
     "meaning": "날씨가 어때?",
@@ -360,7 +468,7 @@ window.expressionsData = [
     "last_modified": 1792907369.0612268
   },
   {
-    "id": 41,
+    "id": 53,
     "unit": "Learning English 27",
     "expression": "Got a feeling",
     "meaning": "느낌이 들어",
@@ -369,7 +477,7 @@ window.expressionsData = [
     "last_modified": 1792907369.0612268
   },
   {
-    "id": 42,
+    "id": 54,
     "unit": "Learning English 27",
     "expression": "Call off our trip",
     "meaning": "여행을 취소하다",
@@ -378,7 +486,7 @@ window.expressionsData = [
     "last_modified": 1792907369.0612268
   },
   {
-    "id": 43,
+    "id": 55,
     "unit": "Learning English 27",
     "expression": "Slipped my mind",
     "meaning": "깜박했어",
@@ -387,7 +495,7 @@ window.expressionsData = [
     "last_modified": 1792907369.0612268
   },
   {
-    "id": 44,
+    "id": 56,
     "unit": "Learning English 27",
     "expression": "Behind my back",
     "meaning": "내 뒤에서, 나 몰래",
@@ -396,7 +504,7 @@ window.expressionsData = [
     "last_modified": 1792907369.0612268
   },
   {
-    "id": 45,
+    "id": 57,
     "unit": "Learning English 27",
     "expression": "Go with the flow",
     "meaning": "흘러가는 대로, 대세를 따르다",
@@ -405,7 +513,7 @@ window.expressionsData = [
     "last_modified": 1792907369.0612268
   },
   {
-    "id": 46,
+    "id": 58,
     "unit": "Learning English 27",
     "expression": "Come to think of it",
     "meaning": "생각해 보니",
@@ -414,7 +522,7 @@ window.expressionsData = [
     "last_modified": 1792907369.0612268
   },
   {
-    "id": 47,
+    "id": 59,
     "unit": "Learning English 27",
     "expression": "I can't miss this",
     "meaning": "농 칠 수 없지",
@@ -423,7 +531,7 @@ window.expressionsData = [
     "last_modified": 1792907369.0612268
   },
   {
-    "id": 48,
+    "id": 60,
     "unit": "Learning English 27",
     "expression": "That's it",
     "meaning": "이거야, 바로 그 거야",
@@ -432,7 +540,7 @@ window.expressionsData = [
     "last_modified": 1792907369.0612268
   },
   {
-    "id": 49,
+    "id": 61,
     "unit": "Learning English 27",
     "expression": "I might as well",
     "meaning": "~ 하는 게 좋을 것 같아",
@@ -441,7 +549,7 @@ window.expressionsData = [
     "last_modified": 1792907369.0612268
   },
   {
-    "id": 50,
+    "id": 62,
     "unit": "Learning English 26",
     "expression": "Look who's here!",
     "meaning": "아니 이게 누구애!",
@@ -450,7 +558,7 @@ window.expressionsData = [
     "last_modified": 1792907366.0515957
   },
   {
-    "id": 51,
+    "id": 63,
     "unit": "Learning English 26",
     "expression": "Small world",
     "meaning": "세상 좁구나",
@@ -459,7 +567,7 @@ window.expressionsData = [
     "last_modified": 1792907366.0515957
   },
   {
-    "id": 52,
+    "id": 64,
     "unit": "Learning English 26",
     "expression": "I'm doing great",
     "meaning": "난 잘 지내",
@@ -468,7 +576,7 @@ window.expressionsData = [
     "last_modified": 1792907366.0515957
   },
   {
-    "id": 53,
+    "id": 65,
     "unit": "Learning English 26",
     "expression": "Say hello to your father",
     "meaning": "안부 전해 줘",
@@ -477,7 +585,7 @@ window.expressionsData = [
     "last_modified": 1792907366.0515957
   },
   {
-    "id": 54,
+    "id": 66,
     "unit": "Learning English 26",
     "expression": "Keep in touch",
     "meaning": "계속 연락하자",
@@ -486,7 +594,7 @@ window.expressionsData = [
     "last_modified": 1792907366.0515957
   },
   {
-    "id": 55,
+    "id": 67,
     "unit": "Learning English 26",
     "expression": "Fancy meeting you",
     "meaning": "만나서 반가워",
@@ -495,7 +603,7 @@ window.expressionsData = [
     "last_modified": 1792907366.0515957
   },
   {
-    "id": 56,
+    "id": 68,
     "unit": "Learning English 26",
     "expression": "What a surprise",
     "meaning": "이게 누구야",
@@ -504,7 +612,7 @@ window.expressionsData = [
     "last_modified": 1792907366.0515957
   },
   {
-    "id": 57,
+    "id": 69,
     "unit": "Learning English 26",
     "expression": "How have you been?",
     "meaning": "그 동안 어떻게 지냈어?",
@@ -513,7 +621,7 @@ window.expressionsData = [
     "last_modified": 1792907366.0515957
   },
   {
-    "id": 58,
+    "id": 70,
     "unit": "Learning English 26",
     "expression": "You haven't changed a bit",
     "meaning": "하나도 안 변했다",
@@ -522,7 +630,7 @@ window.expressionsData = [
     "last_modified": 1792907366.0515957
   },
   {
-    "id": 59,
+    "id": 71,
     "unit": "Learning English 26",
     "expression": "Don't mention it",
     "meaning": "그런 말 하지 마",
@@ -531,7 +639,7 @@ window.expressionsData = [
     "last_modified": 1792907366.0515957
   },
   {
-    "id": 60,
+    "id": 72,
     "unit": "Learning English 26",
     "expression": "You shouldn't have",
     "meaning": "그러지 말지",
@@ -540,121 +648,13 @@ window.expressionsData = [
     "last_modified": 1792907366.0515957
   },
   {
-    "id": 61,
+    "id": 73,
     "unit": "Learning English 26",
     "expression": "Give me aride",
     "meaning": "나 좀 태워 줘",
     "example": null,
     "has_example": false,
     "last_modified": 1792907366.0515957
-  },
-  {
-    "id": 62,
-    "unit": "Learning English 25 A",
-    "expression": "Sassy girl",
-    "meaning": "새침, 도도",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792907365.0593684
-  },
-  {
-    "id": 63,
-    "unit": "Learning English 25 A",
-    "expression": "Carry on",
-    "meaning": "계속해",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792907365.0593684
-  },
-  {
-    "id": 64,
-    "unit": "Learning English 25 A",
-    "expression": "Every other month",
-    "meaning": "격 달로",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792907365.0593684
-  },
-  {
-    "id": 65,
-    "unit": "Learning English 25 A",
-    "expression": "Fair enough",
-    "meaning": "알았어, VARA",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792907365.0593684
-  },
-  {
-    "id": 66,
-    "unit": "Learning English 25 A",
-    "expression": "Getting there?",
-    "meaning": "다 됐어?",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792907365.0593684
-  },
-  {
-    "id": 67,
-    "unit": "Learning English 25 A",
-    "expression": "I'm nearly done",
-    "meaning": "거이 다 됐어",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792907365.0593684
-  },
-  {
-    "id": 68,
-    "unit": "Learning English 25 A",
-    "expression": "I will get back to you",
-    "meaning": "다시 연락 줄게",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792907365.0593684
-  },
-  {
-    "id": 69,
-    "unit": "Learning English 25 A",
-    "expression": "ASAP",
-    "meaning": "As Soon As Possible",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792907365.0593684
-  },
-  {
-    "id": 70,
-    "unit": "Learning English 25 A",
-    "expression": "She is taken",
-    "meaning": "임자 있는 여자",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792907365.0593684
-  },
-  {
-    "id": 71,
-    "unit": "Learning English 25 A",
-    "expression": "Make it two",
-    "meaning": "똑같은 걸로 두 개",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792907365.0593684
-  },
-  {
-    "id": 72,
-    "unit": "Learning English 25 A",
-    "expression": "Stop Flirting",
-    "meaning": "작업 (?) 그만 해, 관심",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792907365.0593684
-  },
-  {
-    "id": 73,
-    "unit": "Learning English 25 A",
-    "expression": "Don't be Picky",
-    "meaning": "까다롭게 굴지 마",
-    "example": null,
-    "has_example": false,
-    "last_modified": 1792907365.0593684
   },
   {
     "id": 74,

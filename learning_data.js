@@ -6,7 +6,7 @@ window.expressionsData = [
     "meaning": "아직 멀었어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792904850.7796583
+    "last_modified": 1792904928.6964097
   },
   {
     "id": 2,
@@ -15,25 +15,25 @@ window.expressionsData = [
     "meaning": "Why?(Why가 조금 공격적인 느낌이 있어서 대체)",
     "example": null,
     "has_example": false,
-    "last_modified": 1792904850.7796583
+    "last_modified": 1792904928.6964097
   },
   {
     "id": 3,
     "unit": "Learning English 30 A",
-    "expression": "I’m just chilling",
+    "expression": "I'm just chilling",
     "meaning": "그냥 쉬고 있어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792904850.7796583
+    "last_modified": 1792904928.6964097
   },
   {
     "id": 4,
     "unit": "Learning English 30 A",
-    "expression": "I’m sober",
+    "expression": "I'm sober",
     "meaning": "(전에는 술 문제 있었는데)술끊었어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792904850.7796583
+    "last_modified": 1792904928.6964097
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@ window.expressionsData = [
     "meaning": "가만두지 않겠어, 뒤졌음",
     "example": null,
     "has_example": false,
-    "last_modified": 1792904850.7796583
+    "last_modified": 1792904928.6964097
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@ window.expressionsData = [
     "meaning": "지금 뭐할 거야?",
     "example": null,
     "has_example": false,
-    "last_modified": 1792904850.7796583
+    "last_modified": 1792904928.6964097
   },
   {
     "id": 7,
@@ -60,34 +60,34 @@ window.expressionsData = [
     "meaning": "맥주 좋아해?",
     "example": null,
     "has_example": false,
-    "last_modified": 1792904850.7796583
+    "last_modified": 1792904928.6964097
   },
   {
     "id": 8,
     "unit": "Learning English 30 A",
-    "expression": "I’m on fire",
+    "expression": "I'm on fire",
     "meaning": "나 오늘 불붙었어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792904850.7796583
+    "last_modified": 1792904928.6964097
   },
   {
     "id": 9,
     "unit": "Learning English 30 A",
-    "expression": "I’d rather not say",
+    "expression": "I'd rather not say",
     "meaning": "말 안하는게 좋을 것 같아",
     "example": null,
     "has_example": false,
-    "last_modified": 1792904850.7796583
+    "last_modified": 1792904928.6964097
   },
   {
     "id": 10,
     "unit": "Learning English 30 A",
-    "expression": "It’s up to you",
+    "expression": "It's up to you",
     "meaning": "너에게 달렸어, 너가 골라",
     "example": null,
     "has_example": false,
-    "last_modified": 1792904850.7796583
+    "last_modified": 1792904928.6964097
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@ window.expressionsData = [
     "meaning": "길가다가 전애인이랑 마주쳤어",
     "example": null,
     "has_example": false,
-    "last_modified": 1792904850.7796583
+    "last_modified": 1792904928.6964097
   },
   {
     "id": 12,
@@ -105,7 +105,7 @@ window.expressionsData = [
     "meaning": "금방보자",
     "example": null,
     "has_example": false,
-    "last_modified": 1792904850.7796583
+    "last_modified": 1792904928.6964097
   },
   {
     "id": 13,

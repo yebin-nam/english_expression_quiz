@@ -6,7 +6,7 @@ window.expressionsData = [
     "meaning": "귀찮게하지 마",
     "example": null,
     "has_example": false,
-    "last_modified": 1793436772.4980154
+    "last_modified": 1793437459.6142213
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@ window.expressionsData = [
     "meaning": "위트 있다, 유머 감각 있다",
     "example": null,
     "has_example": false,
-    "last_modified": 1793436772.4980154
+    "last_modified": 1793437459.6142213
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@ window.expressionsData = [
     "meaning": "천천히 해",
     "example": null,
     "has_example": false,
-    "last_modified": 1793436772.4980154
+    "last_modified": 1793437459.6142213
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@ window.expressionsData = [
     "meaning": "유감입니다",
     "example": null,
     "has_example": false,
-    "last_modified": 1793436772.4980154
+    "last_modified": 1793437459.6142213
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@ window.expressionsData = [
     "meaning": "진심이야",
     "example": null,
     "has_example": false,
-    "last_modified": 1793436772.4980154
+    "last_modified": 1793437459.6142213
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@ window.expressionsData = [
     "meaning": "없는 것보단 낫지",
     "example": null,
     "has_example": false,
-    "last_modified": 1793436772.4980154
+    "last_modified": 1793437459.6142213
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@ window.expressionsData = [
     "meaning": "신경 안 써",
     "example": null,
     "has_example": false,
-    "last_modified": 1793436772.4980154
+    "last_modified": 1793437459.6142213
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@ window.expressionsData = [
     "meaning": "한번 해 봐",
     "example": null,
     "has_example": false,
-    "last_modified": 1793436772.4980154
+    "last_modified": 1793437459.6142213
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@ window.expressionsData = [
     "meaning": "재확인",
     "example": null,
     "has_example": false,
-    "last_modified": 1793436772.4980154
+    "last_modified": 1793437459.6142213
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@ window.expressionsData = [
     "meaning": "그냥 볼게요",
     "example": null,
     "has_example": false,
-    "last_modified": 1793436772.4980154
+    "last_modified": 1793437459.6142213
   },
   {
     "id": 11,
@@ -96,16 +96,16 @@ window.expressionsData = [
     "meaning": "집까지 데려다 줄게요",
     "example": null,
     "has_example": false,
-    "last_modified": 1793436772.4980154
+    "last_modified": 1793437459.6142213
   },
   {
     "id": 12,
     "unit": "Learning English 31 A",
-    "expression": "That's bummer",
+    "expression": "That's a bummer",
     "meaning": "아이고 안됐다야",
     "example": null,
     "has_example": false,
-    "last_modified": 1793436772.4980154
+    "last_modified": 1793437459.6142213
   },
   {
     "id": 13,
